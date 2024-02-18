@@ -14,7 +14,8 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <!-- 그리드 -->
 <link type="text/css" rel="stylesheet" href="../js/kendo-2020.3.1021/kendo.common.min.css" />
-<script type="text/javascript" src="../js/kendo-2020.3.1021/kendo.all.min.js"></script>
+<!-- <script type="text/javascript" src="../js/kendo-2020.3.1021/kendo.all.min.js"></script> -->
+<script type="text/javascript" src="../js/kendo-2024.1.130/kendo.all.min.js"></script>
 <!-- 슬라이드 -->
 <link rel="stylesheet" href="../js/swiper/swiper-bundle.min.css">
 <script src="../js/swiper/swiper-bundle.min.js"></script>
@@ -87,7 +88,29 @@
             <option value="">전체</option>
             <option value="">공지</option>
           </select>
-          <input type="text" placeholder="검색어를 입력해주세요">
+          <div class="input-wrap">
+            <input type="text" placeholder="검색어를 입력해주세요" onkeyup="this.value.length > 0 ? $('.layer-autocomplete').show() : $('.layer-autocomplete').hide() ">
+            <div class="layer-autocomplete">
+              <ul>
+                <li>가<em>나다</em>라마바사</li>
+                <li>가나다라마바<em>나다</em>자차카타파하</li>
+                <li>가<em>나다</em>라마바사</li>
+                <li>가나다라마바<em>나다</em>자차카타파하</li>
+                <li>가<em>나다</em>라마바사</li>
+                <li>가나다라마바<em>나다</em>자차카타파하</li>
+                <li>가<em>나다</em>라마바사</li>
+                <li>가나다라마바<em>나다</em>자차카타파하</li>
+                <li>가<em>나다</em>라마바사</li>
+                <li>가나다라마바<em>나다</em>자차카타파하</li>
+                <li>가<em>나다</em>라마바사</li>
+                <li>가나다라마바<em>나다</em>자차카타파하</li>
+                <li>가<em>나다</em>라마바사</li>
+                <li>가나다라마바<em>나다</em>자차카타파하</li>
+                <li>가<em>나다</em>라마바사</li>
+                <li>가나다라마바<em>나다</em>자차카타파하</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <button class="btn-search"><i class="ico-search"></i></button>
       </div>
@@ -4692,14 +4715,14 @@ function listToggleBtn(){
                 }
               }
             },
-            // pageSize: 15,
+            pageSize: 15,
           });
 
     var grid = $(".grid-1").kendoGrid({
           dataSource: dataSource,
             // groupable: true,
             sortable: true,
-            // pageable: true,
+            pageable: true,
              columns: [
              { selectable: true, width: "50px" },
               { field: "사번", width:"120px"},
