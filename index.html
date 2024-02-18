@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+<!-- style -->
+<style type="text/css">
+  *{margin:0;padding:0;}
+  body {padding:20px; font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+  h1 {color:#000; letter-spacing:-2px;}
+  h2 {margin-top:20px;padding-left:10px;letter-spacing:-2px;position:relative;font-size:18px;}
+  h2:before{content:'';display:block;position:absolute;top:50%;left:0;width:5px;height:5px;background:#333;transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+  .currentsite {display:block; position:absolute; right:40px; top:20px;}
+  .mwork table {width:100%; border-collapse:collapse; border:0px solid #666;margin-top:10px;}
+  .mwork caption {text-align:left; font-size:200%; color:#999;}
+  .mwork th {padding:6px; border:1px solid #fff; color:#fff; font-size:110%; background-color:#1F5DBE;}
+  .mwork td {height:16px; padding:4px; padding-left:10px; border:1px solid #666;}
+  .mwork a,
+  .mwork a:link, #mwork a:visited {color:#009; text-decoration:none;}
+  .mwork a:hover, #mwork a:active {color:#00f; text-decoration:underline;}
+  .mwork td:hover {background-color:#ddd !important;}
+
+  .download{margin-top:15px;}
+  .download ul{list-style-image:none;list-style-position:outside;list-style-type:none;border:0px;display:flex;flex-direction:row;align-items:center;flex-wrap: wrap;gap:10px;}
+
+  .classname{display:none;}
+  .down{font-size:15px;margin-left:50px;}
+
+  .modify{position:relative;color: #ff0000;}
+  .modify .layer{display:none;position: absolute;top:0;right:0;padding:15px;color:#333;white-space:pre-line;width:500px;height:300px;overflow: hidden;overflow-y:auto;background:#fff;z-index:50;}
+  .modify .layer xmp{white-space:pre-line;}
+  .modify:hover .layer{display:block;}
+
+  .title td{background:#eee;}
+
+  .delete{text-decoration:line-through;}
+  .notice{padding:5px 0;font-size: 13px;padding-left:20px;margin-top:15px;background:url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCwsSBQBIWRXaAAAA7klEQVQoz43STUpCYRjF8Z+vcmncqLKhO8iCaNoCrqCtogZFeLegOahJm+iS2jxaQRE0dqi4hgSpgfj9eUYP5/1zeHjek6mZKBKLnTsy0PWt5c1g/JiZgCUPCubVkWiOxgCy6ppLGAWv6rKQvYSaqnW6sOd9lFjegEFVmSDyOO8nkkX0SRRUHNumvKuceNGtr0Lj4HRrHhSDg0VvxY4chuntNyvo78T1g5+dwM+gvRPYDlLdrVhPmjNw52XWXXHHW78BqcbGvIZ03J4P+87WYM/u/Y37OHSjrLMEdVRcGzLbcCIVJSfy6PnSkk6/4x+rojPgRremOAAAAABJRU5ErkJggg==') no-repeat 0 7px;background-size:auto 15px;}
+  .notice ~ .notice{margin-top:0;}
+
+  .delete td{opacity: 0.5;text-decoration: line-through;}
+  .modify td{ color:#ff0000;}
+
+</style>
+<!-- //style -->
+<!-- html body -->
+<script>
+  $(function(){
+    let num = 0;
+    let data =[      
+      ["공통", "title", ""],
+      ["로딩", "", "","loading.html", ""],
+      ["alert", "", "","alert.html", ""],
+      ["필터테스트", "", "","filter-test.html", ""],
+      ["결과없음", "", "","no-data.html", ""],
+      ["에러", "오류", "","error1.html", ""],
+      ["", "", "권한없음","error2.html", ""],
+
+      ["메인", "title", ""],
+      ["메인", "", "","main.html", "조건, 상세검색 팝업 포함되어있음"],
+
+      ["인재검색", "title", ""],
+      ["인재검색", "", "","employee-search.html", "햄버거 2depth메뉴"],
+      ["", "프로필 상세", "","employee-search-detail.html", ""],
+      
+      // DATA Map
+      ["DATA Map", "title", ""],
+      [ "", "DATA Map Service", "", "datamap-service.html", ""],
+      [ "", "", "상세", "datamap-service-detail.html", ""],
+      ["", "코드품질관리", "", "code-service.html", ""],
+      
+      // 공지사항
+      ["공지사항", "title", ""],
+      [ "", "목록", "", "notice-list.html", ""],
+      [ "", "목록", "타입2", "notice-list2.html", "햄버거 2depth메뉴"],
+      ["", "상세", "", "notice-detail.html", ""],
+      ["", "등록/수정", "", "notice-regist.html", ""],
+            
+      // 인재함
+      ["인재함", "title", ""],
+      [ "", "목록", "", "employee-group.html", ""],
+      
+
+      // 시스템 관리
+      ["시스템 관리", "title", ""],
+      [ "", "사용자 권한 설정", "", "user-permission.html", ""],
+      ["", "사용자 권한 요청 현황", "", "user-permission-request.html", ""],
+      ["", "사용자 공통 코드 관리", "", "user-common-code.html", ""],
+
+    ]
+
+    for(var i = 0 ; i<= data.length -1 ; i++){
+      if(data[i][1] == 'title'){
+        $('tbody').append('<tr class="title">'+
+          '<td>'+data[i][0]+'</td>' +
+          '<td></td>' +
+          '<td></td>' +
+          '<td></td>' +
+          '<td></td>' +
+        '</tr>')
+      }else{
+        num += 1
+        $('tbody').append('<tr>'+
+          '<td>'+data[i][0]+'</td>' +
+          '<td>'+data[i][1]+'</td>' +
+          '<td>'+data[i][2]+'</td>' +
+          '<td><a href="#">'+data[i][3]+'</a></td>' +
+          '<td>'+data[i][4]+'</td>' +
+        '</tr>')
+      }
+    }
+
+    $('td:nth-child(4)').addClass('pagename');
+    $('td:nth-child(5)').addClass('etc');
+
+
+    $('.pagename a').each(function(){
+      var filename = $(this).text();
+      $(this).attr('href', 'html/'+filename);
+    });
+
+    $('.etc').each(function(){
+      if($(this).text().includes('삭제')){
+        $(this).parent().addClass('delete')
+      }
+      if($(this).text().includes('수정')){
+        $(this).parent().addClass('modify')
+      }
+    });
+  });
+
+</script>
+</head>
+<body>
+<!-- sheet -->
+<h1>Publishing Work Sheet &nbsp;&nbsp;</h1>
+
+<div class="download">
+  <ul>
+    <li><a href="coding(ver.1).zip" style="padding:5px 15px;border:1px solid #ccc;color:#000;font-size: 12px;;text-decoration: none;">다운로드(ver.1)</a></li>
+    <li><a href="coding(ver.1.1).zip" style="padding:5px 15px;border:1px solid #ccc;color:#000;font-size: 12px;;text-decoration: none;">다운로드(ver.1.1)</a></li>
+    <li><a href="coding(ver.1.2).zip" style="padding:5px 15px;border:1px solid #ccc;color:#000;font-size: 12px;;text-decoration: none;">다운로드(ver.1.2)</a></li>
+  </ul>
+</div>
+
+<div class="mwork">
+  <table>
+    <colgroup>
+      <col style="width:150px" />
+      <col style="width:150px" />
+      <col style="width:150px" />
+      <col style="width:400px" />
+      <col style="width:auto" />
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>Depth2</th>
+        <th>Depth3</th>
+        <th>FileName/Link</th>
+        <th>memo</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</div>
+
+<!-- //sheet -->
+
+</body>
+</html>

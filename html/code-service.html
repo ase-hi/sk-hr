@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script type="text/javascript" src="../js/ui.js"></script>
+<!-- 그리드 -->
+<link type="text/css" rel="stylesheet" href="../js/kendo-2020.3.1021/kendo.common.min.css" />
+<script type="text/javascript" src="../js/kendo-2020.3.1021/kendo.all.min.js"></script>
+<!-- 슬라이드 -->
+<link rel="stylesheet" href="../js/swiper/swiper-bundle.min.css">
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<!-- 필터셀렉트 -->
+<link type="text/css" rel="stylesheet" href="../js/amsify.select/amsify.select.css" />
+<script type="text/javascript" src="../js/amsify.select/jquery.amsifyselect.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- header -->
+  <div class="header">
+    <div class="wrap-inner">
+      <h1 class="logo-title">
+        <div class="logo"></div>
+      </h1>
+      <div class="right">
+        <div class="user-menu">
+          <div class="layer-wrap">
+            <button class="btn-menu"><i class="ico-menu"></i></button>
+            <div class="menu-layer">
+              <ul>
+                <li><a href="javascript:void(0);">전체검색</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+                <li><a href="javascript:void(0);">Data Map</a></li>
+                <li><a href="javascript:void(0);">인재함</a></li>
+                <li><a href="javascript:void(0);">시스템관리</a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn">MY HR</button>
+          <div class="user-thumb layer-wrap">
+            <a href="javascript:void(0);" class="thumb"></a>
+            <div class="menu-layer">
+              <button type="button" class="close"></button>
+              <div class="user-info">
+                <div class="thumb"></div>
+                <div class="info">
+                  <span>전략기획실</span>
+                  <span>현기획</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // header -->
+    <!-- lnb-menu-wrap -->
+    <div class="lnb-menu-wrap">
+      
+      <!-- lnb-menu -->
+      <div class="lnb-menu">
+          <h2 class="lnb-title">Data Map</h2>
+          <ul class="lnb">
+              <li><a href="javascript:void(0);"><span class="txt">전체검색</span></a></li>
+              <li><a href="javascript:void(0);"><span class="txt">공지사항</span></a></li>
+              <li class="on has-menu open"><a href="javascript:void(0);"><span class="txt">Data Map</span></a>
+                <ul>
+                  <li><a href="javascript:void(0);">Data Map Service</a></li>
+                  <li class="on"><a href="javascript:void(0);">코드 품질 관리</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript:void(0);"><span class="txt">인재함</span></a></li>
+              <li class="has-menu open"><a href="javascript:void(0);"><span class="txt">시스템관리</span></a>
+                <ul>
+                  <li><a href="javascript:void(0);">사용자 권한 설정</a></li>
+                  <li><a href="javascript:void(0);">사용자 권한 요청 현황</a></li>
+                  <li><a href="javascript:void(0);">사용자 공통 코드 관리</a></li>
+                </ul>
+              </li>
+          </ul>
+      </div>
+      <!-- // lnb-menu -->
+    </div>
+    <!-- // lnb-menu-wrap -->
+  <!-- container -->
+  <div class="container">
+      <!-- content -->
+      <div class="content">
+        <div class="title-wrap">
+          <h2 class="title-primary">코드 품질 관리</h2>
+          <div class="right">
+            <ol class="path">
+              <li><a href="/"><i class="ico-home"></i></a></li>
+              <li><span>Data Map</span></li>
+              <li><span>코드 품질 관리</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="data-top">
+          <span class="total">표준화 매핑 목록</span>
+          <div class="right">
+            <select>
+              <option value="">전체</option>
+              <option value="">선택1</option>
+              <option value="">선택2</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="data-type2">
+          <div class="tbl">
+            <div class="data-header">
+              <div class="row">
+                <div class="th" style="width:50px">번호</div>
+                <div class="th" style="width:auto">멤버사명</div>
+                <div class="th" style="width:15%">데이터명</div>
+                <div class="th" style="width:15%">속성명</div>
+                <div class="th" style="width:15%">표준화 매핑여부</div>
+                <div class="th" style="width:15%">변경하기</div>
+                <div class="th" style="width:15%">변경이력</div>
+              </div>
+            </div>
+            <div class="data-body">
+              <div class="row">
+                <div class="td" style="width:50px">1</div>
+                <div class="td" style="width:auto">SK 주식회사</div>
+                <div class="td" style="width:15%">인사 기본정보</div>
+                <div class="td" style="width:15%">고객번호</div>
+                <div class="td" style="width:15%">N</div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change');">변경</a></div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change-history');">이력보기</a></div>
+              </div>
+              <div class="row">
+                <div class="td" style="width:50px">1</div>
+                <div class="td" style="width:auto">SK 주식회사</div>
+                <div class="td" style="width:15%">인사 기본정보</div>
+                <div class="td" style="width:15%">고객번호</div>
+                <div class="td" style="width:15%">N</div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change');">변경</a></div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change-history');">이력보기</a></div>
+              </div>
+              <div class="row">
+                <div class="td" style="width:50px">1</div>
+                <div class="td" style="width:auto">SK 주식회사</div>
+                <div class="td" style="width:15%">인사 기본정보</div>
+                <div class="td" style="width:15%">고객번호</div>
+                <div class="td" style="width:15%">N</div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change');">변경</a></div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change-history');">이력보기</a></div>
+              </div>
+              <div class="row">
+                <div class="td" style="width:50px">1</div>
+                <div class="td" style="width:auto">SK 주식회사</div>
+                <div class="td" style="width:15%">인사 기본정보</div>
+                <div class="td" style="width:15%">고객번호</div>
+                <div class="td" style="width:15%">N</div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change');">변경</a></div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change-history');">이력보기</a></div>
+              </div>
+              <div class="row">
+                <div class="td" style="width:50px">1</div>
+                <div class="td" style="width:auto">SK 주식회사</div>
+                <div class="td" style="width:15%">인사 기본정보</div>
+                <div class="td" style="width:15%">고객번호</div>
+                <div class="td" style="width:15%">N</div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change');">변경</a></div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change-history');">이력보기</a></div>
+              </div>
+              <div class="row">
+                <div class="td" style="width:50px">1</div>
+                <div class="td" style="width:auto">SK 주식회사</div>
+                <div class="td" style="width:15%">인사 기본정보</div>
+                <div class="td" style="width:15%">고객번호</div>
+                <div class="td" style="width:15%">N</div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change');">변경</a></div>
+                <div class="td" style="width:15%"><a href="javascript:void(0);" class="link" onclick="popOpen('#pop-change-history');">이력보기</a></div>
+              </div>
+              <div class="row next">
+                <div class="td" style="width:100%">
+                  <div class="detail-view">
+                    <b class="tit-detail-view">상세보기</b>
+                    <div class="tbl">
+                      <div class="data-header">
+                        <div class="row">
+                          <div class="th" style="width:150px">테이블명</div>
+                          <div class="th" style="width:180px">영문명</div>
+                          <div class="th" style="width:auto">테이블 정의</div>
+                        </div>
+                      </div>
+                      <div class="data-body">
+                        <div class="row">
+                          <div class="th" style="width:150px">개인기</div>
+                          <div class="td" style="width:180px">ABCDE</div>
+                          <div class="td align-l" style="width:auto">내용 내용 내용내용 내용 내용내용 내용 내용</div>
+                        </div>
+                      </div>
+                      <div class="data-header">
+                        <div class="row">
+                          <div class="th" style="width:150px">속성명</div>
+                          <div class="th" style="width:180px">영문명</div>
+                          <div class="th" style="width:auto">속성 상태</div>
+                          <div class="th" style="width:120px">데이터 타입</div>
+                          <div class="th" style="width:120px">????? 상태</div>
+                          <div class="th" style="width:120px">??? 여부</div>
+                          <div class="th" style="width:120px">코드도메인</div>
+                        </div>
+                      </div>
+                      <div class="data-body">
+                        <div class="row">
+                          <div class="th" style="width:150px">고객번호</div>
+                          <div class="td" style="width:180px">A</div>
+                          <div class="td align-l" style="width:auto">고객의 정보</div>
+                          <div class="td" style="width:120px">텍스트</div>
+                          <div class="td" style="width:120px">Y</div>
+                          <div class="td" style="width:120px">N</div>
+                          <div class="td" style="width:120px"><a href="javascript:void(0);" class="link">선호도</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="th" style="width:150px">고객번호</div>
+                          <div class="td" style="width:180px">A</div>
+                          <div class="td align-l" style="width:auto">고객의 정보</div>
+                          <div class="td" style="width:120px">텍스트</div>
+                          <div class="td" style="width:120px">Y</div>
+                          <div class="td" style="width:120px">N</div>
+                          <div class="td" style="width:120px"><a href="javascript:void(0);" class="link">선호도</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+          							
+        <div class="paging-wrap">
+          <div class="pagination">
+            <div class="paging">
+              <button type="button" class="btn-first" disabled></button>
+              <button type="button" class="btn-prev" disabled></button>
+              <div class="page">
+                <button>1</button>
+                <button class="on">2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+              </div>
+              <button type="button" class="btn-next"></button>
+              <button type="button" class="btn-last"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // content -->
+  </div>
+  <!-- // container -->
+
+</div>
+<!-- // wrapper -->
+<button type="button" class="btn-employee-compare"><span class="txt">인재<br>비교</span><i class="ico-employee-compare"></i></button>
+
+<div class="layerpopup" id="pop-change">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup" style="width:1000px;">
+      <a href="javascript:void(0);" class="close type2" onclick="popClose('#pop-change');"></a>
+      <div class="pop-header">
+        <strong class="pop-tit">변경하기</strong>
+      </div>
+      <div class="pop-body">
+        <div class="data-type3">
+          <table>
+              <colgroup>
+                  <col style="width:70px">
+                  <col style="width:auto">
+                  <col style="width:100px">
+                  <col style="width:110px">
+                  <col style="width:150px">
+                  <col style="width:150px">
+                  <col style="width:180px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>속셩명</th>
+                    <th>상세 속성</th>
+                    <th>상세 속성 설명</th>
+                    <th>그룹 공통 코드</th>
+                    <th>그룹 공통 상세 코드</th>
+                    <th>그룹 공통 코드 매핑일시</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10</td>
+                  <td>성별 구분 코드</td>
+                  <td>M</td>
+                  <td>남성</td>
+                  <td>
+                    <select>
+                      <option value="">선택</option>
+                      <option value="">선택1</option>
+                      <option value="">선택2</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select>
+                      <option value="">선택</option>
+                      <option value="">선택1</option>
+                      <option value="">선택2</option>
+                    </select>
+                  </td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>성별 구분 코드</td>
+                  <td>M</td>
+                  <td>남성</td>
+                  <td>
+                    <select>
+                      <option value="">선택</option>
+                      <option value="">선택1</option>
+                      <option value="">선택2</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select>
+                      <option value="">선택</option>
+                      <option value="">선택1</option>
+                      <option value="">선택2</option>
+                    </select>
+                  </td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>성별 구분 코드</td>
+                  <td>M</td>
+                  <td>남성</td>
+                  <td>
+                    <select>
+                      <option value="">선택</option>
+                      <option value="">선택1</option>
+                      <option value="">선택2</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select>
+                      <option value="">선택</option>
+                      <option value="">선택1</option>
+                      <option value="">선택2</option>
+                    </select>
+                  </td>
+                  <td>2022-08-30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+        <div class="btn-wrap">
+          <button type="button" class="btn-type1 st2" onclick="popClose('#pop-change');">취소</button>
+          <button type="button" class="btn-type1 st1" onclick="popClose('#pop-change');">변경</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layerpopup" id="pop-change-history">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup">
+      <a href="javascript:void(0);" class="close type2" onclick="popClose('#pop-change-history');"></a>
+      <div class="pop-header">
+        <strong class="pop-tit">변경 이력</strong>
+      </div>
+      <div class="pop-body">
+        <div class="data-type3 sticky" style="max-height: 300px;">
+          <table>
+              <colgroup>
+                  <col style="width:auto">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>변경일자</th>
+                    <th>변경속성명</th>
+                    <th>변경전</th>
+                    <th>변경후</th>
+                    <th>변경자</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <td>2023-10-111</td>
+                  <td>성별 구분 코드</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>홍길동</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+        <div class="btn-wrap">
+          <button type="button" class="btn-type1 st1" onclick="popClose('#pop-change-history');">확인</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

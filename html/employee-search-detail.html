@@ -1,0 +1,900 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script type="text/javascript" src="../js/ui.js"></script>
+<!-- 그리드 -->
+<link type="text/css" rel="stylesheet" href="../js/kendo-2020.3.1021/kendo.common.min.css" />
+<script type="text/javascript" src="../js/kendo-2020.3.1021/kendo.all.min.js"></script>
+<!-- 슬라이드 -->
+<link rel="stylesheet" href="../js/swiper/swiper-bundle.min.css">
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<!-- 필터셀렉트 -->
+<link type="text/css" rel="stylesheet" href="../js/amsify.select/amsify.select.css" />
+<script type="text/javascript" src="../js/amsify.select/jquery.amsifyselect.js"></script>
+</head>
+<body class="bg-gray">
+<!-- wrapper -->
+<div class="employee-search-detail-wrapper">
+    <div class="employee-search-detail">
+      <div class="title">프로필 상세</div>
+      <div class="profile-desc">
+        <div class="thumb-wrap">
+          <div class="thumb"><img src="../images/temp-photo2.jpg" alt=""></div>
+        </div>
+        <div class="info-text">
+          <div class="txt"><b class="name">현민수</b><span class="age">(남, 만40세)</span></div>
+          <div class="compare-list">
+            <div class="info-list">
+              <div class="tit"><b>조직</b>
+                <span class="tooltip-wrap">
+                  <i class="ico-noti"></i>
+                  <span class="tooltip-layer">
+                    <span class="tooltip-txt">소속사, 부서, 발령일자, 직위/직책, 입사일자, 그룹입사일자 </span>
+                  </span>
+                </span>
+              </div>
+              <div class="cont">
+                <ul class="list">
+                  <li>SK네트웍스</li>
+                  <li>DT추진팀</li>
+                  <li>2023-01-01</li>
+                  <li>팀장/팀장</li>
+                  <li>2020-09-10</li>
+                  <li>2010-05-17</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-list">
+              <div class="tit"><b>보상</b>
+                <span class="tooltip-wrap">
+                  <i class="ico-noti"></i>
+                  <span class="tooltip-layer">
+                    <span class="tooltip-txt">연봉</span>
+                  </span>
+                </span>
+              </div>
+              <div class="cont">
+                <ul class="list">
+                  <li>12,700만원</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-list">
+              <div class="tit"><b>역량</b>
+                <span class="tooltip-wrap">
+                  <i class="ico-noti"></i>
+                  <span class="tooltip-layer">
+                    <span class="tooltip-txt">졸업학교, 전공, 외국어, 자격</span>
+                  </span>
+                </span>
+              </div>
+              <div class="cont">
+                <ul class="list">
+                  <li>성균관대학교</li>
+                  <li>컴퓨터공학</li>
+                  <li>영어/TOEIC/980</li>
+                  <li>정보처리기사</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-list">
+              <div class="tit"><b>성과</b>
+                <span class="tooltip-wrap">
+                  <i class="ico-noti"></i>
+                  <span class="tooltip-layer">
+                    <span class="tooltip-txt">23년,	22년,	21년</span>
+                  </span>
+                </span>
+              </div>
+              <div class="cont">
+                <ul class="list">
+                  <li>S</li>
+                  <li>A</li>
+                  <li>S</li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="quick-menu-wrap">
+        <div class="quick-menu">
+          <dl>
+            <dt>Quick</dt>
+            <dd>
+              <ul>
+                <li><a href="#quick1" class="menu"><i class="ico-person-search"></i><span>인사</span></a></li>
+                <li><a href="#quick2" class="menu"><i class="ico-org"></i><span>조직</span></a></li>
+                <li><a href="#quick3" class="menu"><i class="ico-money"></i><span>보상</span></a></li>
+                <li><a href="#quick4" class="menu"><i class="ico-power"></i><span>역량</span></a></li>
+                <li><a href="#quick5" class="menu"><i class="ico-flag"></i><span>성과</span></a></li>
+                <li><a href="javascript:void(0);" onclick="popOpen('#pop-agree');"><i class="ico-print"></i><span>인쇄</span></a></li>
+                <li><a href="javascript:void(0);" onclick="popOpen('#pop-download-set');"><i class="ico-pdf"></i><span>PDF</span></a></li>
+                <li class="top"><a href="javascript:void(0);" onclick="$(window).scrollTop(0)">TOP</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </div>        
+      </div>
+      <!-- compare-list-wrap -->
+      <div class="compare-list-wrap">
+        
+        <div class="compare-list">
+          <div class="box">
+            <div class="info-list">
+              <dl id="quick1">
+                <dt><span>인사</span><a href="javascript:void(0);"></a></dt>
+                <dd>
+                  <div class="tit"><b>인적사항</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">이름, 영문명, 한자명, 생년월일, 결혼유무, 국적, E-Mail, 이동전화 </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="list">
+                      <li>현민수</li>
+                      <li>Hyun Minsoo</li>
+                      <li>儇旻殊</li>
+                      <li>1983-09-23</li>
+                      <li>기혼</li>
+                      <li>대한민국</li>
+                      <li><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></li>
+                      <li>010-2342-5678</li>
+                    </ul>
+                  </div>
+                  <div class="tit"><b>현소속정보</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">회사명, 부서명, 직원유형, 직위/직책, 입사일, 그룹입사일, 발령일자 </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="list">
+                      <li>SK네트웍스</li>
+                      <li>DT추진팀</li>
+                      <li>정규직</li>
+                      <li>팀장/팀장</li>
+                      <li>2020-09-10</li>
+                      <li>2010-05-17</li>
+                      <li>2023-01-01</li>
+                    </ul>
+                  </div>
+                  <div class="tit"><b>주소</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">주민등록지, 실거주지</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="list">
+                      <li>서울시 강남구 일원동 121-12</li>
+                      <li>경기도 수원시 영통구 미래동 레미안아파트 1210동 23호</li>
+                    </ul>
+                  </div>
+                  <div class="tit"><b>가족정보</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">가족관계,	이름,	성별,	생년월일</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>부</li>
+                          <li>현대용</li>
+                          <li>남</li>
+                          <li>1957-01-03</li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="num">2.</span>
+                        <ul class="list">
+                          <li>모</li>
+                          <li>김영자</li>
+                          <li>여</li>
+                          <li>1955-05-05</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">3.</span>
+                        <ul class="list">
+                          <li>배우자</li>
+                          <li>채하연</li>
+                          <li>여</li>
+                          <li>1981-11-30</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </dd>
+              </dl>
+              <dl id="quick2">
+                <dt><span>조직</span><a href="javascript:void(0);"></a></dt>
+                <dd>
+                  <div class="tit"><b>입사후 경력</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">발령일자,	발령구분,	부서명,	직책,	직위,	근무지</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">3.</span>
+                        <ul class="list">
+                          <li>2023-01-01</li>
+                          <li>정기인사</li>
+                          <li>DT추진팀</li>
+                          <li>팀장</li>
+                          <li>팀장</li>
+                          <li>서울</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">2.</span>
+                        <ul class="list">
+                          <li>2022-01-01</li>
+                          <li>정기인사</li>
+                          <li>DT추진팀</li>
+                          <li>팀원</li>
+                          <li>매니저</li>
+                          <li>서울</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>2020-09-10</li>
+                          <li>관계사전입</li>
+                          <li>정보보호팀</li>
+                          <li>팀원</li>
+                          <li>매니저</li>
+                          <li>서울</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tit"><b>입사 전 경력</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">회사명,	입사일자,	퇴사일자,	부서명,	직책,	직위,	근무지</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>SK매직</li>
+                          <li>2010-05-17</li>
+                          <li>2016-09-11</li>
+                          <li>IT개발팀</li>
+                          <li>팀원</li>
+                          <li>매니저</li>
+                          <li>서울</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>     
+
+                </dd>
+              </dl>
+              <dl id="quick3">
+                <dt><span>보상</span><a href="javascript:void(0);"></a></dt>
+                <dd>
+                  <div class="tit"><b>급여</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">연봉시작원 종료원 연봉금액(천원), 기준월, 수당금액(천원), 숫당명, 보너스 지급원, 보너스 금액(천원), 보너스 명, 일회성 보너스 지급원, 일회성 보너스 지급 금액(천원), 욀회성 보너스 명</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">4.</span>
+                        <ul class="list">
+                          <li>2020-04-01</li>
+                          <li>2020-12-31</li>
+                          <li>87,000</li>
+                          <li>2020-04</li>
+                          <li>1,000</li>
+                          <li>기본추가 수당</li>
+                          <li>2020-04</li>
+                          <li>2,000</li>
+                          <li>경직보너스</li>
+                          <li>2020-04</li>
+                          <li>500</li>
+                          <li>이달의 SUPEX</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">3.</span>
+                        <ul class="list">
+                          <li>2020-04-01</li>
+                          <li>2020-12-31</li>
+                          <li>87,000</li>
+                          <li>2020-04</li>
+                          <li>1,000</li>
+                          <li>기본추가 수당</li>
+                          <li>2020-04</li>
+                          <li>2,000</li>
+                          <li>경직보너스</li>
+                          <li>2020-04</li>
+                          <li>500</li>
+                          <li>이달의 SUPEX</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">2.</span>
+                        <ul class="list">
+                          <li>2020-04-01</li>
+                          <li>2020-12-31</li>
+                          <li>87,000</li>
+                          <li>2020-04</li>
+                          <li>1,000</li>
+                          <li>기본추가 수당</li>
+                          <li>2020-04</li>
+                          <li>2,000</li>
+                          <li>경직보너스</li>
+                          <li>2020-04</li>
+                          <li>500</li>
+                          <li>이달의 SUPEX</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>2020-04-01</li>
+                          <li>2020-12-31</li>
+                          <li>87,000</li>
+                          <li>2020-04</li>
+                          <li>1,000</li>
+                          <li>기본추가 수당</li>
+                          <li>2020-04</li>
+                          <li>2,000</li>
+                          <li>경직보너스</li>
+                          <li>2020-04</li>
+                          <li>500</li>
+                          <li>이달의 SUPEX</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </dd>
+              </dl>
+              <dl id="quick4">
+                <dt><span>역량</span><a href="javascript:void(0);"></a></dt>
+                <dd>
+                  <div class="tit"><b>학력사항</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">구분,	입학일자,	졸업일자,	학교명,	전공,	학위,	소재지</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">4.</span>
+                        <ul class="list">
+                          <li>대학교</li>
+                          <li>2017-01-01 ~ 2020-12-31</li>
+                          <li>성균관대학교</li>
+                          <li>전자전기컴퓨터</li>
+                          <li>학사</li>
+                          <li>수원</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">3.</span>
+                        <ul class="list">
+                          <li>고등학교</li>
+                          <li>1999-03-02</li>
+                          <li>2002-02-12</li>
+                          <li>고덕외국어고등학교</li>
+                          <li>스페인어</li>
+                          <li>졸업</li>
+                          <li>서울</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">2.</span>
+                        <ul class="list">
+                          <li>중학교</li>
+                          <li>1996-03-02</li>
+                          <li>1999-02-12</li>
+                          <li>영채중학교</li>
+                          <li>-</li>
+                          <li>졸업</li>
+                          <li>서울</li>
+
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>초등학교</li>
+                          <li>1990-03-02</li>
+                          <li>1996-02-23</li>
+                          <li>명회초등학교</li>
+                          <li>-</li>
+                          <li>졸업</li>
+                          <li>서울</li>
+
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+            
+                  <div class="tit"><b>교육사항</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">교육기간, 구분, 교육명, 교육기관, 특이사항</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">2.</span>
+                        <ul class="list">
+                          <li>2021-01-01~ 2023-02-01</li>
+                          <li>이수</li>
+                          <li>BigData 처리와 R</li>
+                          <li> 한국기술교육</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>2017-01-01~ 2020-12-31</li>
+                          <li>이수</li>
+                          <li>JAVA 고급과정</li>
+                          <li> 솔데스크</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+          
+                  <div class="tit"><b>외국어</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">구분,	시험명,	점수</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>영어</li>
+                          <li>TOEIC</li>
+                          <li>980</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+             
+                  <div class="tit"><b>자격면허</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">구분,	발급처,	취득일자</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>운전면허 1종 보통</li>
+                          <li>서울경찰청</li>
+                          <li>2010-01-21</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </dd>
+              </dl>
+              <dl id="quick5">
+                <dt><span>성과</span><a href="javascript:void(0);"></a></dt>
+                <dd>
+                  <div class="tit"><b>평가</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">평가년도,	업적,	역량,	종합,	Comment</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">4.</span>
+                        <ul class="list">
+                          <li>2023</li>
+                          <li>S</li>
+                          <li>S</li>
+                          <li>S</li>
+                          <li>자신의 아이디어에 대한 특징이나 장점 기대효과를 명확히 설명명하고 이해시킴</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">3.</span>
+                        <ul class="list">
+                          <li>2022</li>
+                          <li>A</li>
+                          <li>S</li>
+                          <li>A</li>
+                          <li>고객이 확신을 갖고 동의할 수 있도록 구체적인 의사를 전달하고 목표를 다함</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">2.</span>
+                        <ul class="list">
+                          <li>2021</li>
+                          <li>S</li>
+                          <li>S</li>
+                          <li>S</li>
+                          <li>이견을 제시할 경우 의견을 받아들이되 여러가지 설득적인 논리를 찾아내어 제시</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>2020</li>
+                          <li>A</li>
+                          <li>A</li>
+                          <li>A</li>
+                          <li>마케팅 전략 수립 시 각각의 제품 이미지에 맞는 차별화된 전략을 수립</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>                  
+                  <div class="tit"><b>Project/Task</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">수행년도,	Project/Task,	수행 실적,	Comment</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>2023</li>
+                          <li>전사 데이터 통합 Project 구축</li>
+                          <li>Project 성공 수행</li>
+                          <li>리더나 고객이 요청하는 업무에 대해 기간 내에 완수할 뿐 아니라 중간 보고를 통한 일처리 방향을 공유함</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tit"><b>상벌사항</b>
+                    <span class="tooltip-wrap type2 floating">
+                      <i class="ico-noti"></i>
+                      <span class="tooltip-layer">
+                        <span class="tooltip-txt">일자, 구분, 유형, 내용, 재정권자</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="cont">
+                    <ul class="num-list">
+                      <li>
+                        <span class="num">1.</span>
+                        <ul class="list">
+                          <li>2023-12-20</li>
+                          <li>상</li>
+                          <li>성과급 지급</li>
+                          <li>Project 성공 수행</li>
+                          <li>본부장</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!-- // compare-list-wrap -->
+    </div>
+
+</div>
+<!-- // wrapper -->
+
+<div class="layerpopup" id="pop-download-set">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup" style="width:400px;">
+      <a href="javascript:void(0);" class="close type2" onclick="popClose('#pop-download-set');"></a>
+      <div class="pop-header">
+        <strong class="pop-tit">PDF 다운로드 설정</strong>
+      </div>
+      <div class="pop-body">
+        <!-- default-box-wrap -->
+        <div class="default-box-wrap">
+          <div class="data-box" style="width:370px;">
+            <div class="data-top">
+              <b class="title-major">항목</b>
+            </div>
+            
+            <div class="list-box" style="height:150px;">
+              <ul class="default-list list2">
+                <li>
+                  <label class="inp-check">
+                    <input type="checkbox" name="item" value="1">
+                    <span class="ic"></span>
+                    <span class="t">전체</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-check">
+                    <input type="checkbox" name="item" value="2">
+                    <span class="ic"></span>
+                    <span class="t">인사</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-check">
+                    <input type="checkbox" name="item" value="3">
+                    <span class="ic"></span>
+                    <span class="t">조직</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-check">
+                    <input type="checkbox" name="item" value="4">
+                    <span class="ic"></span>
+                    <span class="t">보상</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-check">
+                    <input type="checkbox" name="item"  value="5">
+                    <span class="ic"></span>
+                    <span class="t">역량</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-check">
+                    <input type="checkbox" name="item" value="6">
+                    <span class="ic"></span>
+                    <span class="t">초과</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="input input-textarea" id="textarea">
+              <textarea maxlength="100" placeholder="사유를 입력해주세요." onkeyup="$('.byte em').text(this.value.length);"></textarea>
+              <div class="byte"><em>0</em>/<span class="total">100자</span></div>
+            </div>
+            <script>
+                downCheck1 = false;
+                downCheck2 = false;
+
+              $('#textarea .byte em').text($('#textarea textarea').get(0).value.length)
+
+
+              $('[name="item"]').on('change', function(){
+                $(this).prop('checked') ? downCheck1 = true : downCheck1 = false;
+                console.log(downCheck1, downCheck2);
+                downCheck1 && downCheck2 ? $('#pdf-download').removeAttr('disabled') : $('#pdf-download').attr('disabled', 'disabled');
+              });
+              $('#textarea textarea').on('keyup', function(){
+                $(this).val() ? downCheck2 = true : downCheck2 = false;
+                console.log(downCheck1, downCheck2);
+                downCheck1 && downCheck2 ? $('#pdf-download').removeAttr('disabled') : $('#pdf-download').attr('disabled', 'disabled');
+              });
+            </script>            
+          </div>
+        </div>
+        <!-- // both-box-wrap -->
+
+
+        <div class="btn-wrap">
+          <button type="button" class="btn-type1 st2" onclick="popClose('#pop-download-set');">취소</button>
+          <button type="button" class="btn-type1 st1" id="pdf-download" disabled onclick="popClose('#pop-download-set');">다운로드</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="layerpopup" id="pop-agree">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup" style="width:400px;">
+      <a href="javascript:void(0);" class="close type2" onclick="popClose('#pop-agree');"></a>
+      <div class="pop-header">
+        <strong class="pop-tit">개인정보 보호 동의</strong>
+      </div>
+      <div class="pop-body">
+        <div class="using-agree">
+          <div class="input input-textarea" style="height:200px">
+            <textarea placeholder="사유를 입력해주세요." onkeyup="this.value ? $('#download').removeAttr('disabled') : $('#download').attr('disabled', 'disabled')"></textarea>
+          </div>
+        </div>
+
+        <div class="btn-wrap">
+          <button type="button" class="btn-type1 st2" onclick="popClose('#pop-agree');">취소</button>
+          <button type="button" class="btn-type1 st1" id="download" disabled onclick="popClose('#pop-agree');">다운로드</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+   
+   
+    //인재검색 한개씩 오픈
+    $('.compare-list .box .info-list dl dt a').on('click', function(){
+      let $pannel = $(this).parents('dt').next();
+      let $siblings = $(this).parents('dl').siblings('dl').find('dd');
+      let $siblingsLink = $(this).parents('dl').siblings('dl').find('dt a');
+      // $siblings.slideUp();
+      // $siblingsLink.removeClass('on');
+      if($pannel.is(':hidden') ){
+        $(this).addClass('on');
+        $pannel.slideDown()
+      }else{
+        $(this).removeClass('on');
+        $pannel.slideUp()
+      }
+    });
+
+    //인재검색 모두오픈
+    // $('.compare-list .box .info-list dl dt a').on('click', function(){
+    //   let $pannels = $('.compare-list .box .info-list dl dt').next();
+    //   let $links =  $('.compare-list .box .info-list dl dt a');
+
+    //   if($pannels.is(':hidden') ){
+    //     $links.addClass('on');
+    //     $pannels.slideDown()
+    //   }else{
+    //     $links.removeClass('on');
+    //     $pannels.slideUp()
+    //   }
+    // });
+
+
+    // 탭
+    quickMenu();
+    function quickMenu(){
+	var click = false;
+	$('.quick-menu .menu').on('click', function(e){
+    
+		e.preventDefault()
+		click = true
+		setTimeout(function(){
+			click = false
+		}, 300);
+
+		var h = $('.profile-desc').height() + 10
+		var id = $(this).attr('href').split('#')[1]
+
+		if($(this).parents('li').length > 0){
+			$('.quick-menu li').removeClass('on')
+			$(this).parents('li').addClass('on');
+		}else{
+			$('.quick-menu .menu').removeClass('on');
+			$(this).addClass('on');
+		}
+
+		setTimeout(function(h){
+			// if($(window).scrollTop() + $(window).height() == $(document).height()) {
+			// 	return;
+			// }
+			if($('#'+id).length <= 0 ) return
+			$(window).scrollTop($('#'+id).offset().top - h)
+		},100, h)
+	});
+
+	$(window).on('scroll', function(){
+		if(click) return;
+		if($(window).scrollTop() + $(window).height() == $(document).height()) {
+			return;
+		}
+		var sct  = $(window).scrollTop()
+
+		$('.quick-menu .menu').each(function(){
+			if($(this).attr('href') !== '#' && $(this).attr('href').includes('#')){
+			var id = $(this).attr('href')
+
+			if($(id).length <= 0 ) return
+			var h = $('.profile-desc').height() + 10
+			var t = $(id).offset().top - h
+				if(sct > t){
+					if($(this).parents('li').length > 0){
+						$('.quick-menu li').removeClass('on')
+						$(this).parents('li').addClass('on');
+					}else{
+						$('.quick-menu .menu').removeClass('on')
+						$(this).addClass('on');
+					}
+				}
+			}
+		})
+
+	});
+}
+
+
+
+    //이용동의 선택(checkbox)          
+    const checkboxs = $(".inp-check.item input[type=checkbox]");
+    $("#allCheck").on("change", function() {
+        if ($(this).is(':checked')) {
+            $(".check-all").addClass("checked");
+            checkboxs.prop('checked', true);
+            $(".checks .item-t").addClass("active");
+        } else {
+            $(".check-all").removeClass("checked");
+            checkboxs.prop('checked', false);
+        }
+        authCheckInputs();
+    });
+    checkboxs.on("change", function(event) {
+        let total = $(".inp-check.item input[type=checkbox]").length;
+        let checked = $(".inp-check.item input[type=checkbox]:checked").length;
+        $(event.currentTarget).closest(".item-t").addClass("active");
+        if (total === checked) {
+            $(".check-all").addClass("checked");
+            $("#allCheck").prop("checked", true);
+        } else {
+            $(".check-all").removeClass("checked");
+            $("#allCheck").prop("checked", false);
+        }
+        authCheckInputs();
+    });
+
+    //이용동의 약관 상세보기(접기/펴기)
+    $(".agree-checks .btn-detail").on("click", function() {
+        const target = $(this).closest(".item-t");
+        target.hasClass("active") ? target.removeClass("active") : target.addClass("active");
+    });
+</script>
+</body>
+</html>

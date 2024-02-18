@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script type="text/javascript" src="../js/ui.js"></script>
+<!-- 그리드 -->
+<link type="text/css" rel="stylesheet" href="../js/kendo-2020.3.1021/kendo.common.min.css" />
+<script type="text/javascript" src="../js/kendo-2020.3.1021/kendo.all.min.js"></script>
+<!-- 슬라이드 -->
+<link rel="stylesheet" href="../js/swiper/swiper-bundle.min.css">
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<!-- 필터셀렉트 -->
+<link type="text/css" rel="stylesheet" href="../js/amsify.select/amsify.select.css" />
+<script type="text/javascript" src="../js/amsify.select/jquery.amsifyselect.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- header -->
+  <div class="header">
+    <div class="wrap-inner">
+      <h1 class="logo-title">
+        <div class="logo"></div>
+      </h1>
+      <div class="right">
+        <div class="user-menu">
+          <div class="layer-wrap">
+            <button class="btn-menu"><i class="ico-menu"></i></button>
+            <div class="menu-layer">
+              <ul>
+                <li><a href="javascript:void(0);">전체검색</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+                <li><a href="javascript:void(0);">Data Map</a></li>
+                <li><a href="javascript:void(0);">인재함</a></li>
+                <li><a href="javascript:void(0);">시스템관리</a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn">MY HR</button>
+          <div class="user-thumb layer-wrap">
+            <a href="javascript:void(0);" class="thumb"></a>
+            <div class="menu-layer">
+              <button type="button" class="close"></button>
+              <div class="user-info">
+                <div class="thumb"></div>
+                <div class="info">
+                  <span>전략기획실</span>
+                  <span>현기획</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // header -->
+    <!-- lnb-menu-wrap -->
+    <div class="lnb-menu-wrap">
+      
+      <!-- lnb-menu -->
+      <div class="lnb-menu">
+          <h2 class="lnb-title">공지사항</h2>
+          <ul class="lnb">
+              <li><a href="javascript:void(0);"><span class="txt">전체검색</span></a></li>
+              <li class="on"><a href="javascript:void(0);"><span class="txt">공지사항</span></a></li>
+              <li class="has-menu open"><a href="javascript:void(0);"><span class="txt">Data Map</span></a>
+                <ul>
+                  <li><a href="javascript:void(0);">Data Map Service</a></li>
+                  <li><a href="javascript:void(0);">코드 품질 관리</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript:void(0);"><span class="txt">인재함</span></a></li>
+              <li class="has-menu open"><a href="javascript:void(0);"><span class="txt">시스템관리</span></a>
+                <ul>
+                  <li><a href="javascript:void(0);">사용자 권한 설정</a></li>
+                  <li><a href="javascript:void(0);">사용자 권한 요청 현황</a></li>
+                  <li><a href="javascript:void(0);">사용자 공통 코드 관리</a></li>
+                </ul>
+              </li>
+          </ul>
+      </div>
+      <!-- // lnb-menu -->
+    </div>
+    <!-- // lnb-menu-wrap -->
+  <!-- container -->
+  <div class="container">
+      <!-- content -->
+      <div class="content">
+        <div class="title-wrap">
+          <h2 class="title-primary">공지사항</h2>
+          <div class="right">
+            <ol class="path">
+              <li><a href="/"><i class="ico-home"></i></a></li>
+              <li><span>공지사항</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="data-top">
+          <span class="total">전체(총 <b>15</b> 건)</span>
+          <div class="right">
+            <!-- <select>
+              <option value="">전체</option>
+              <option value="">공지</option>
+              <option value="">선택</option>
+            </select> -->
+            <div class="inp-search">
+              <i class="ico-search"></i>
+              <input type="text" placeholder="검색어를 입력해주세요.">
+            </div>
+            <button type="button" class="btn-type2 st1">검색</button>
+          </div>
+        </div>
+        
+        <div class="data-type1">
+          <table>
+              <colgroup>
+                  <col style="width:80px">
+                  <col style="width:80px">
+                  <col style="width:auto">
+                  <col style="width:80px">
+                  <col style="width:100px">
+                  <col style="width:80px">
+                  <col style="width:100px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>분류</th>
+                    <th>제목</th>
+                    <th>파일</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                    <th>등록일</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10</td>
+                  <td><span class="tag-type st1">중요</span></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td><i class="ico-file"></i></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><span class="tag-type st1">중요</span></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td><i class="ico-file"></i></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td><i class="ico-file"></i></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td></td>
+                  <td class="align-l"><a href="javascript:void(0);" class="ellips">공지글 제목입니다.</a></td>
+                  <td></td>
+                  <td>김관리</td>
+                  <td>10</td>
+                  <td>2022-08-30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="paging-wrap">
+            <div class="pagination">
+              <div class="paging">
+                <button type="button" class="btn-first" disabled></button>
+                <button type="button" class="btn-prev" disabled></button>
+                <div class="page">
+                  <button>1</button>
+                  <button class="on">2</button>
+                  <button>3</button>
+                  <button>4</button>
+                  <button>5</button>
+                </div>
+                <button type="button" class="btn-next"></button>
+                <button type="button" class="btn-last"></button>
+              </div>
+            </div>
+            
+          </div>
+         <div class="btn-wrap">
+          <div class="right">
+            <a href="javascript:void(0);" class="btn-type1 st1">작성</a>
+          </div>
+         </div>
+      </div>
+      <!-- // content -->
+  </div>
+  <!-- // container -->
+
+</div>
+<!-- // wrapper -->
+
+<button type="button" class="btn-employee-compare"><span class="txt">인재<br>비교</span><i class="ico-employee-compare"></i></button>
+</body>
+</html>
