@@ -91,24 +91,28 @@
           <div class="input-wrap">
             <input type="text" placeholder="검색어를 입력해주세요" onkeyup="this.value.length > 0 ? $('.layer-autocomplete').show() : $('.layer-autocomplete').hide() ">
             <div class="layer-autocomplete">
-              <ul>
-                <li>가<em>나다</em>라마바사</li>
-                <li>가나다라마바<em>나다</em>자차카타파하</li>
-                <li>가<em>나다</em>라마바사</li>
-                <li>가나다라마바<em>나다</em>자차카타파하</li>
-                <li>가<em>나다</em>라마바사</li>
-                <li>가나다라마바<em>나다</em>자차카타파하</li>
-                <li>가<em>나다</em>라마바사</li>
-                <li>가나다라마바<em>나다</em>자차카타파하</li>
-                <li>가<em>나다</em>라마바사</li>
-                <li>가나다라마바<em>나다</em>자차카타파하</li>
-                <li>가<em>나다</em>라마바사</li>
-                <li>가나다라마바<em>나다</em>자차카타파하</li>
-                <li>가<em>나다</em>라마바사</li>
-                <li>가나다라마바<em>나다</em>자차카타파하</li>
-                <li>가<em>나다</em>라마바사</li>
-                <li>가나다라마바<em>나다</em>자차카타파하</li>
-              </ul>
+              <div class="layer">
+                <a href="javascript:void(0);" class="autocomplete-item">1.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">2.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">3.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">4.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">5.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">6.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">7.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">8.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">9.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">10.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">11.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">12.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">13.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">14.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">15.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">16.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">17.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">18.가나다라마바<em>나다</em>자차카타파하</a>
+                <a href="javascript:void(0);" class="autocomplete-item">19.가<em>나다</em>라마바사</a>
+                <a href="javascript:void(0);" class="autocomplete-item">20.가나다라마바<em>나다</em>자차카타파하</a>
+              </div>
             </div>
           </div>
         </div>
@@ -169,10 +173,29 @@
                 <div class="box-body">
                   <div class="f-wrap">
                     <div class="auto">
-                      <select class="filter-select" name="company" searchable>
-                        <option value="1">SK머티리얼즈</option>
-                        <option value="2">SK하이닉스</option>
-                        <option value="3">SKC&C</option>
+                      <select class="filter-select" name="company" searchable multiple onchange="console.log($(this).val())">
+                        <option value="1">SK(주)</option>
+                        <option value="2">SK이노베이션</option>
+                        <option value="3">SK하이닉스</option>
+                        <option value="4">SK텔레콤</option>
+                        <option value="5">SK E&S</option>
+                        <option value="6">SK에코플랜트</option>
+                        <option value="7">SK실트론</option>
+                        <option value="8">SK네트웍스</option>
+                        <option value="9">SKC</option>
+                        <option value="10">SK스퀘어</option>
+                        <option value="11">SK㈜ C&C</option>
+                        <option value="12">SK㈜ 머티리얼즈</option>
+                        <option value="13">SK바이오팜</option>
+                        <option value="14">SK디스커버리</option>
+                        <option value="15">SK케미칼</option>
+                        <option value="16">SK가스</option>
+                        <option value="17">SK에너지</option>
+                        <option value="18">SK지오센트릭</option>
+                        <option value="19">SK온</option>
+                        <option value="20">SK엔무브</option>
+                        <option value="21">SKIET</option>
+                        <option value="22">SK브로드밴드</option>
                       </select>
                     </div>
                     <div class="right">
@@ -247,19 +270,11 @@
                 <div class="box-body">
                     <div class="f-wrap">
                       <div class="auto">
-                        <select>
-                          <option value="">SK머티리얼즈</option>
-                          <option value="">SK하이닉스</option>
-                          <option value="">SKC&C</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="f-wrap">
-                      <div class="auto">
-                        <select>
-                          <option value="">직무1</option>
-                          <option value="">직무2</option>
-                          <option value="">직무3</option>
+                        <select class="filter-select" name="job" searchable multiple onchange="console.log($(this).val())">
+                          <option value="1">직무1</option>
+                          <option value="2">직무2</option>
+                          <option value="3">직무3</option>
+                          <option value="4">직무4</option>
                         </select>
                       </div>
                       <div class="right">
@@ -278,19 +293,11 @@
                 <div class="box-body">
                     <div class="f-wrap">
                       <div class="auto">
-                        <select>
-                          <option value="">SK머티리얼즈</option>
-                          <option value="">SK하이닉스</option>
-                          <option value="">SKC&C</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="f-wrap">
-                      <div class="auto">
-                        <select>
-                          <option value="">직책1</option>
-                          <option value="">직책2</option>
-                          <option value="">직책3</option>
+                        <select class="filter-select" name="position" searchable multiple onchange="console.log($(this).val())">
+                          <option value="1">직책1</option>
+                          <option value="2">직책2</option>
+                          <option value="3">직책3</option>
+                          <option value="4">직책4</option>
                         </select>
                       </div>
                       <div class="right">
@@ -307,19 +314,11 @@
                 <div class="box-body">
                     <div class="f-wrap">
                       <div class="auto">
-                        <select>
-                          <option value="">SK머티리얼즈</option>
-                          <option value="">SK하이닉스</option>
-                          <option value="">SKC&C</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="f-wrap">
-                      <div class="auto">
-                        <select>
-                          <option value="">회사명1</option>
-                          <option value="">회사명2</option>
-                          <option value="">회사명3</option>
+                        <select class="filter-select" name="workplace" searchable multiple onchange="console.log($(this).val())">
+                          <option value="1">근무지1</option>
+                          <option value="2">근무지2</option>
+                          <option value="3">근무지3</option>
+                          <option value="4">근무지4</option>
                         </select>
                       </div>
                       <div class="right">
@@ -4792,6 +4791,10 @@ function listToggleBtn(){
     
 
   });
+
+
+    //자동완성
+    autoCompleteEvt('.employee-search-wrap .search-area');
 
 </script>
 

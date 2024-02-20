@@ -25,7 +25,7 @@
 <script type="text/javascript" src="../js/amsify.select/jquery.amsifyselect.js"></script>
 </head>
 <body>
-  <select class="filter-select" name="country" searchable onchange="alert(this.value);">
+  <select class="filter-select" name="country" searchable onchange="console.log(this.value);">
     <option value="">Select Country</option>
     <option value="1">가나다</option>
     <option value="2" selected>라마바</option>
@@ -49,6 +49,37 @@
     <option value="72">West Indies 2</option>
   </select>
   <button class="btn-type1 st1" onclick="initFilter()">확인</button>
+
+  <br>
+  <br>
+  multiplefilter
+  <br>
+  <br>
+
+  <select class="filter-select" name="country" searchable multiple >
+    <option value="">Select Country</option>
+    <option value="1">가나다</option>
+    <option value="2" selected>라마바</option>
+    <option value="4">아자차</option>
+    <option value="5">Russia</option>
+    <option value="6">South Africa</option>
+    <option value="7">West Indies</option>
+  
+    <option value="11">India 1</option>
+    <option value="21">Afghanistan 1</option>
+    <option value="41">USA 1</option>
+    <option value="51">Russia 1</option>
+    <option value="61">South Africa 1</option>
+    <option value="71">West Indies 1</option>
+  
+    <option value="12">India 2</option>
+    <option value="22">Afghanistan 2</option>
+    <option value="42">USA 2</option>
+    <option value="52">Russia 2</option>
+    <option value="62">South Africa 2</option>
+    <option value="72">West Indies 2</option>
+  </select>
+
   
   <script type="text/javascript">
     $('.filter-select').amsifySelect({
@@ -59,7 +90,7 @@
     function initFilter(select){
       $('[name="country"] option').removeAttr('selected');
       $('.filter-select').amsifySelect({
-        type : 'amsify',
+        // type : 'amsify',
         searchable: true
       },'refresh');
     }

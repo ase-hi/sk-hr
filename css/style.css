@@ -225,9 +225,12 @@ body.bg-gray{background:#F2F4F6;}
 .employee-search-wrap .recomend-word .words span {display:inline-flex;align-items: center;padding:0 15px;height:26px;font-size:12px; color:#444;background:#fff;border-radius:26px;}
 .employee-search-wrap .recomend-word .words span ~ span{margin-left:5px;}
 
-.layer-autocomplete{display:none; position:absolute;top:55px;left:0;width:100%;background:#fff;z-index: 20;box-shadow: 0px 3px 16px 0px rgba(153, 155, 168, 0.20);border-radius:10px;padding:10px 15px;max-height: 150px;overflow-y:auto;}
-.layer-autocomplete ul li{text-align:left;font-size:14px;}
-.layer-autocomplete ul li em{ color:#2828fb;vertical-align:baseline;}
+.layer-autocomplete{display:none; position:absolute;top:55px;left:0;width:100%;background:#fff;z-index: 20;box-shadow: 0px 3px 16px 0px rgba(153, 155, 168, 0.20);border-radius:10px;padding:10px 0;max-height: 150px;overflow-y:auto;}
+/* .layer-autocomplete .layer li{text-align:left;} */
+.layer-autocomplete .layer a{display:block;text-align:left;font-size:14px;padding:0 15px;border:2px dotted transparent}
+.layer-autocomplete .layer a:focus{display:block;border:2px dotted #2052f7;}
+/* .layer-autocomplete .layer a:focus em{ color:#fff;} */
+.layer-autocomplete .layer a em{ color:#2828fb;vertical-align:baseline;}
 .layer-autocomplete::-webkit-scrollbar{-webkit-appearance:none;}
 .layer-autocomplete::-webkit-scrollbar:vertical{width:5px;}
 .layer-autocomplete::-webkit-scrollbar:horizontal{height:5px;} 
@@ -377,7 +380,7 @@ body.bg-gray{background:#F2F4F6;}
 .compare-list .info-list::-webkit-scrollbar-thumb{ background-color:rgba(0,0,0,.2); border-radius:10px; }
 .compare-list .info-list::-webkit-scrollbar-track{ background-color:rgba(0,0,0,.05); border-radius:10px; }
 .compare-list .info-list dl dt {border-bottom:1px solid #ccc;position:relative;display:flex;align-items:center;font-size:16px;font-weight:500;}
-.compare-list .info-list dl dt a {height:50px;width:50px;margin-left:auto;position:relative;}
+.compare-list .info-list dl dt a {height:50px;width:65px;margin-left:auto;position:relative;}
 .compare-list .info-list dl dt a:after{content:'';display:block;width:50px;height:100%;position:absolute;top:0;right:0;background:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.96881 0.415515C9.82456 0.0526349 9.44319 -0.100593 9.1065 0.0690755C9.05742 0.0938024 8.3398 0.80765 7.01649 2.14809L5.00122 4.18946L2.96723 2.13116C1.05168 0.192691 0.927479 0.0708602 0.834003 0.0384297C0.404578 -0.110533 -0.0304238 0.216741 0.00167367 0.664662C0.0200019 0.920292 -0.128997 0.755434 2.37478 3.29065C4.95989 5.90825 4.72238 5.69437 5.02779 5.67975C5.16272 5.67328 5.2138 5.66208 5.2883 5.62261C5.35855 5.58537 5.92873 5.01757 7.64559 3.27519C9.56207 1.33022 9.91646 0.962419 9.95063 0.882921C10.0085 0.748332 10.0167 0.536068 9.96881 0.415515Z' fill='%235B5B5B'/%3E%3C/svg%3E%0A") no-repeat 50% 50%;background-size:auto 8px;}
 .compare-list .info-list dl dt a.on:after{transform: rotate(-180deg);}
 .compare-list .info-list dl dd{display:none;}
@@ -389,9 +392,14 @@ body.bg-gray{background:#F2F4F6;}
 .compare-list .info-list .cont .list {display:flex;flex-wrap: wrap;gap:5px}
 .compare-list .info-list .cont .list li {background:#f5f5f5;padding:3px 5px;border-radius:3px;min-height:24px;display:inline-flex;align-items: center;;white-space: normal;	word-break: break-all;}
 .compare-list .info-list .cont .list li .email {white-space: normal;	word-break: break-all;}
-.compare-list .info-list .cont .list-tb table{border:1px solid #ddd;border-radius:5px;}
+.compare-list .info-list .cont .list-tb{border-top:1px solid #222;}
+.compare-list .info-list .cont .list-tb table{border-radius:5px;width:100%;}
 .compare-list .info-list .cont .list-tb th{font-weight:500;font-size:13px;border-bottom:1px solid #ddd;padding:5px 10px; color:#000;word-break: keep-all;}
 .compare-list .info-list .cont .list-tb td{padding:5px 10px;font-size:13px;text-align:center;word-break: keep-all;}
+.compare-list .info-list .cont .list-tb .comment-list li{display:flex;}
+.compare-list .info-list .cont .list-tb .comment-list li ~ li{margin-top:5px;}
+.compare-list .info-list .cont .list-tb .comment-list li .label{ display:flex;justify-content:center;align-items:center; align-items: center; padding: 0 5px; height: 22px; font-size: 12.5px; color: #444; background: #F3F3F3;}
+.compare-list .info-list .cont .list-tb .comment-list li .comm{fleX:1;overflow:hidden;word-break: keep-all;padding-top:3px;padding-left:10px;}
 .compare-list .info-list .cont .list-tb.st2 th,
 .compare-list .info-list .cont .list-tb.st2 td{padding:5px 5px;font-size:12px;}
 .compare-list .info-list .cont .num-list > li{display:flex;}

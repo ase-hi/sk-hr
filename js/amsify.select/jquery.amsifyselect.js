@@ -31,7 +31,7 @@
 		};
 		this.name          	= null;
 		this.id     		= null;
-		this.defaultLabel  	= 'Select';
+		this.defaultLabel  	= '선택';
 		this.classes       	= {
 		    selectArea    : '.amsify-selection-area',
 		    labelArea     : '.amsify-selection-label',
@@ -166,10 +166,10 @@
         createHTML : function() {
 			var HTML                  = '<div '+this.getSelectionAreaId()+' class="'+this.classes.selectArea.substring(1)+'"></div>';
 			this.selectors.selectArea = $(HTML).insertAfter(this.selector);
-			var labelHTML             = '<div class="'+this.classes.labelArea.substring(1)+'"></div>';
+			var labelHTML             = '<button class="'+this.classes.labelArea.substring(1)+'"></button>';
 			this.selectors.labelArea  = $(labelHTML).appendTo(this.selectors.selectArea);
 
-			this.defaultLabel         = (this.options[0].value)? this.defaultLabel: this.options[0].label;
+			// this.defaultLabel         = (this.options[0].value)? this.defaultLabel: this.options[0].label;
 			var label                 = '<div class="'+this.classes.label.substring(1)+'">'+this.defaultLabel+'</div>';
 			this.selectors.label      = $(label).appendTo(this.selectors.labelArea);
 			this.selectors.toggle     = $(this.toggleIcon()).appendTo(this.selectors.labelArea);
@@ -185,7 +185,7 @@
 				var searchArea            = '<div class="'+this.classes.searchArea.substring(1)+'"></div>';
 				this.selectors.searchArea = $(searchArea).appendTo(this.selectors.listArea);
 
-				var search                = '<input type="text" class="'+this.classes.search.substring(1)+'" placeholder="Search here..."/>';
+				var search                = '<input type="text" class="'+this.classes.search.substring(1)+'" placeholder="검색어 입력"/>';
 				this.selectors.search     = $(search).appendTo(this.selectors.searchArea);
 			}
 
@@ -204,6 +204,7 @@
 			this.selectors.close      = $(close).appendTo(this.selectors.operations);
 			$(this.createList()).appendTo(this.selectors.list);
 			this.fixCSS();
+
         },            
 
         setEvents : function() {
@@ -243,6 +244,46 @@
 				};
 				_self.setValue(values);
 			});
+
+
+
+			/**
+			* 개인추가
+			*/
+			let input  = $(this.selectors.search).get(0);
+			let autocompleteLayer = $(this.selectors.list).get(0);
+
+			input.addEventListener('keydown', function(event){
+			if (event.keyCode === 40) {
+						//자동완성 레이어에 대한 이벤트 핸들러 등록
+						autocompleteLayer.querySelector('button').focus();
+						event.preventDefault(); 
+	
+						autocompleteLayer.addEventListener('keydown', function(event) {
+								// 눌린 키가 화살표 위쪽 키(키 코드 38)인지 확인
+								if (event.keyCode === 38) {
+										// 이전 아이템으로 포커스를 이동
+										let currentItem = document.activeElement;
+										let previousItem = currentItem.previousElementSibling;
+										if (previousItem && previousItem.classList.contains('amsify-list-item')) {
+												event.preventDefault(); // 화살표 위쪽 키의 기본 동작 방지
+												previousItem.focus();
+										}
+								}
+								// 눌린 키가 화살표 아래쪽 키(키 코드 40)인지 확인
+								else if (event.keyCode === 40) {
+										// 다음 아이템으로 포커스를 이동
+										let currentItem = document.activeElement;
+										let nextItem = currentItem.nextElementSibling;
+										if (nextItem && nextItem.classList.contains('amsify-list-item')) {
+												event.preventDefault(); // 화살표 아래쪽 키의 기본 동작 방지
+												nextItem.focus();
+										}
+								}
+						});
+					}
+				});
+
 			/**
 			* If searchable
 			*/
@@ -295,8 +336,12 @@
 					}
 				}
 			});
-			label = (values.length >= this.settings.labelLimit)? values.length+' selected': label.slice(0, -2);
-			$(this.selectors.label).text(label);
+			label = (values.length >= this.settings.labelLimit)? values.length+' 개 선택': label.slice(0, -2);
+			if(values.length > 0){
+				$(this.selectors.label).text(label);
+			}else{
+				$(this.selectors.label).text('선택');
+			}
 			$(this.selector).change();
 			if(!_self.isMultiple) {
 				$(this.selectors.listArea).hide();
@@ -322,11 +367,11 @@
 			var selected  = false;
 			$.each(this.options, function(index, option){
 				if(option.type === 'optgroup') {
-					listHTML += '<li class="'+_self.classes.listGroup.substring(1)+'">'+option.label+'</li>';
+					listHTML += '<button class="'+_self.classes.listGroup.substring(1)+'">'+option.label+'</button>';
 				} else if(option.value) {
 					var isActive = ((option.selected && _self.isMultiple) || (option.selected && !selected))? 'active': '';
 					isActive += (_self.isOptGroup)? ' '+_self.classes.itemPad.substring(1): '';
-					listHTML += '<li class="'+_self.classes.listItem.substring(1)+' '+isActive+'">'+_self.getInputType(option.value)+' '+option.label+'</li>';
+					listHTML += '<button class="'+_self.classes.listItem.substring(1)+' '+isActive+'">'+_self.getInputType(option.value)+' '+option.label+'</button>';
 					if(option.selected) {
 						_self.selected.push(option.value);
 						selected = true;
