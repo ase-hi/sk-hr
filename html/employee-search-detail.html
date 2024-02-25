@@ -108,9 +108,11 @@
                 <li><a href="#quick3" class="menu"><i class="ico-money"></i><span>보상</span></a></li>
                 <li><a href="#quick4" class="menu"><i class="ico-power"></i><span>역량</span></a></li>
                 <li><a href="#quick5" class="menu"><i class="ico-flag"></i><span>성과</span></a></li>
+                <li><a href="#quick6" class="menu"><i class="ico-scout"></i><span>스카우트</span></a></li>
+                <li><a href="#quick7" class="menu"><i class="ico-emd"></i><span>EMD</span></a></li>
                 <li><a href="javascript:void(0);" onclick="popOpen('#pop-agree');"><i class="ico-print"></i><span>인쇄</span></a></li>
                 <li><a href="javascript:void(0);" onclick="popOpen('#pop-download-set');"><i class="ico-pdf"></i><span>PDF</span></a></li>
-                <li class="top"><a href="javascript:void(0);" onclick="$(window).scrollTop(0)">TOP</a></li>
+                <li class="top"><a href="javascript:void(0);" onclick="$(window).scrollTop(0)"><i class="ico-top"></i><span>TOP</span></a></li>
               </ul>
             </dd>
           </dl>
@@ -366,12 +368,6 @@
                       <table>
                         <colgroup>
                           <col style="width: 40px;">
-                          <col style="width: 70px;">
-                          <col style="width: 70px;">
-                          <col style="width: auto;">
-                          <col style="width: 60px;">
-                          <col style="width: auto;">
-                          <col style="width: auto;">
                           <col style="width: auto;">
                           <col style="width: auto;">
                           <col style="width: auto;">
@@ -382,85 +378,36 @@
                           <thead>
                               <tr>
                                 <th>No.</th>
-                                <th>연봉시작월</th>
-                                <th>연봉종료월</th>
+                                <th>년도</th>
+                                <th>총액</th>
                                 <th>연봉금액</th>
-                                <th>기준월</th>
-                                <th>수당금액(천원)</th>
-                                <th>수당명</th>
-                                <th>보너스 지급월</th>
-                                <th>보너스 금액(천원)</th>
-                                <th>보너스명</th>
-                                <th>일회성 보너스 지급월</th>
-                                <th>일회성 보너스 지급 금액(천원)</th>
-                                <th>욀회성 보너스명</th>
+                                <th onclick="popOpen('#pop-extra-pay')">수당금액</th>
+                                <th onclick="popOpen('#pop-bonus')">보너스 금액</th>
+                                <th onclick="popOpen('#pop-bonus-Instant')">일회성 보너스 지급 금액</th>
                               </tr>
                           </thead>
                           <tbody>
                                 <tr>
-                                  <td>4.</td>
-                                  <td>2020-04-01</td>
-                                  <td>2020-12-31</td>
-                                  <td>87,000</td>
-                                  <td>2020-04</td>
-                                  <td>1,000</td>
-                                  <td>기본추가 수당</td>
-                                  <td>2020-04</td>
-                                  <td>2,000</td>
-                                  <td>경직보너스</td>
-                                  <td>2020-04</td>
-                                  <td>500</td>
-                                  <td>이달의 SUPEX</td>
-                                </tr>
-                                <tr>
-                                  <td>3.</td>
-                                  <td>2020-04-01</td>
-                                  <td>2020-12-31</td>
-                                  <td>87,000</td>
-                                  <td>2020-04</td>
-                                  <td>1,000</td>
-                                  <td>기본추가 수당</td>
-                                  <td>2020-04</td>
-                                  <td>2,000</td>
-                                  <td>경직보너스</td>
-                                  <td>2020-04</td>
-                                  <td>500</td>
-                                  <td>이달의 SUPEX</td>
-                                </tr>
-                                <tr>
                                   <td>2.</td>
-                                  <td>2020-04-01</td>
-                                  <td>2020-12-31</td>
-                                  <td>87,000</td>
-                                  <td>2020-04</td>
-                                  <td>1,000</td>
-                                  <td>기본추가 수당</td>
-                                  <td>2020-04</td>
-                                  <td>2,000</td>
-                                  <td>경직보너스</td>
-                                  <td>2020-04</td>
-                                  <td>500</td>
-                                  <td>이달의 SUPEX</td>
+                                  <td>2023</td>
+                                  <td>107,500,000</td>
+                                  <td>100,000,000</td>
+                                  <td>5,000,000</td>
+                                  <td>2,000,000</td>
+                                  <td>500,000</td>
                                 </tr>
                                 <tr>
                                   <td>1.</td>
-                                  <td>2020-04-01</td>
-                                  <td>2020-12-31</td>
-                                  <td>87,000</td>
-                                  <td>2020-04</td>
-                                  <td>1,000</td>
-                                  <td>기본추가 수당</td>
-                                  <td>2020-04</td>
-                                  <td>2,000</td>
-                                  <td>경직보너스</td>
-                                  <td>2020-04</td>
-                                  <td>500</td>
-                                  <td>이달의 SUPEX</td>
+                                  <td>2022</td>
+                                  <td>117,500,000</td>
+                                  <td>100,000,000</td>
+                                  <td>15,000,000</td>
+                                  <td>2,000,000</td>
+                                  <td>500,000</td>
                                 </tr>
                           </tbody>
                       </table>
                       </div>
-                    
                   </div>
                 </dd>
               </dl>
@@ -778,6 +725,142 @@
                   
                 </dd>
               </dl>
+              <dl id="quick6">
+                <dt><span>스카우트</span><a href="javascript:void(0);"></a></dt>
+                <dd>
+                  <div class="tit"><b>경력기술서</b></div>
+                  <div class="cont">
+                    <div class="list-tb">
+                      <table>
+                        <colgroup>
+                          <col style="width: 40px;">
+                          <col style="width: 180px;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                        </colgroup>
+                          <thead>
+                              <tr>
+                                <th>No.</th>
+                                <th>프로젝트명</th>
+                                <th>참여기간</th>
+                                <th>고객사</th>
+                                <th>역할</th>
+                                <th>OS</th>
+                                <th>언어</th>
+                                <th>DBMS</th>
+                                <th>Tool</th>
+                                <th>FrameWork</th>
+                                <th>기타</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                                <tr>
+                                  <td>2.</td>
+                                  <td class="align-l">공항철도 신뢰성분석 신뢰성 분석 프로젝트 </td>
+                                  <td>2023.03~2023.12</td>
+                                  <td>공항철도</td>
+                                  <td>개발</td>
+                                  <td>Windows</td>
+                                  <td>Java, JSP</td>
+                                  <td>Oracle</td>
+                                  <td>Eclipse, Nexacro14</td>
+                                  <td> eGovFrame</td>
+                                  <td>Tomcat</td>
+                                </tr>
+                                <tr>
+                                  <td>1.</td>
+                                  <td class="align-l">공항철도 신뢰성 분석 프로젝트</td>
+                                  <td>2023.03~2023.12</td>
+                                  <td>공항철도</td>
+                                  <td>개발</td>
+                                  <td>Windows</td>
+                                  <td>Java, JSP</td>
+                                  <td>Oracle</td>
+                                  <td>Eclipse, Nexacro14</td>
+                                  <td> eGovFrame</td>
+                                  <td>Tomcat</td>
+                                </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                  </div>                  
+                </dd>
+              </dl>
+              <dl id="quick7">
+                <dt><span>EMD</span><a href="javascript:void(0);"></a></dt>
+                <dd>
+                  <div class="tit"><b>경력기술서</b></div>
+                  <div class="cont">
+                    <div class="list-tb">
+                      <table>
+                        <colgroup>
+                          <col style="width: 40px;">
+                          <col style="width: 180px;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                          <col style="width: auto;">
+                        </colgroup>
+                          <thead>
+                              <tr>
+                                <th>No.</th>
+                                <th>프로젝트명</th>
+                                <th>참여기간</th>
+                                <th>고객사</th>
+                                <th>역할</th>
+                                <th>OS</th>
+                                <th>언어</th>
+                                <th>DBMS</th>
+                                <th>Tool</th>
+                                <th>FrameWork</th>
+                                <th>기타</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                                <tr>
+                                  <td>2.</td>
+                                  <td class="align-l">공항철도 신뢰성분석 프로젝트</td>
+                                  <td>2023.03~2023.12</td>
+                                  <td>공항철도</td>
+                                  <td>개발</td>
+                                  <td>Windows</td>
+                                  <td>Java, JSP</td>
+                                  <td>Oracle</td>
+                                  <td>Eclipse, Nexacro14</td>
+                                  <td> eGovFrame</td>
+                                  <td>Tomcat</td>
+                                </tr>
+                                <tr>
+                                  <td>1.</td>
+                                  <td class="align-l">공항철도 신뢰성분석 프로젝트</td>
+                                  <td>2023.03~2023.12</td>
+                                  <td>공항철도</td>
+                                  <td>개발</td>
+                                  <td>Windows</td>
+                                  <td>Java, JSP</td>
+                                  <td>Oracle</td>
+                                  <td>Eclipse, Nexacro14</td>
+                                  <td> eGovFrame</td>
+                                  <td>Tomcat</td>
+                                </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                  </div>                  
+                </dd>
+              </dl>
             </div>
           </div>
         </div>
@@ -911,6 +994,197 @@
     </div>
   </div>
 </div>
+
+
+<div class="layerpopup" id="pop-bonus">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup">
+      <a href="javascript:void(0);" class="close type2" onclick="popClose('#pop-bonus');"></a>
+      <div class="pop-header">
+        <strong class="pop-tit">보너스 상세</strong>
+      </div>
+      <div class="pop-body">
+        <div class="data-type3 sticky" style="max-height: 300px;">
+          <table>
+              <colgroup>
+                  <col style="width:80px">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>NO</th>
+                    <th>지급월</th>
+                    <th>금액</th>
+                    <th>보너스명</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>2023-12</td>
+                  <td>1,000</td>
+                  <td>겸직보너스</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2023-09</td>
+                  <td>2,000</td>
+                  <td>상여금</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2023-06</td>
+                  <td>1,000</td>
+                  <td>겸직보너스</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2023-03</td>
+                  <td>1,000</td>
+                  <td>겸직보너스</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+        <div class="btn-wrap">
+          <button type="button" class="btn-type1 st1" onclick="popClose('#pop-bonus');">확인</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layerpopup" id="pop-bonus-Instant">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup">
+      <a href="javascript:void(0);" class="close type2" onclick="popClose('#pop-bonus-Instant');"></a>
+      <div class="pop-header">
+        <strong class="pop-tit">일회성 보너스 상세</strong>
+      </div>
+      <div class="pop-body">
+        <div class="data-type3 sticky" style="max-height: 300px;">
+          <table>
+              <colgroup>
+                  <col style="width:80px">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>NO</th>
+                    <th>지급월</th>
+                    <th>금액</th>
+                    <th>보너스명</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>2023-12</td>
+                  <td>500</td>
+                  <td>이달의 SUPEX</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2023-09	</td>
+                  <td>500</td>
+                  <td>이달의 SUPEX</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2023-06</td>
+                  <td>500</td>
+                  <td>이달의 SUPEX</td>                  
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2023-03</td>
+                  <td>500</td>
+                  <td>이달의 SUPEX</td>                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+        <div class="btn-wrap">
+          <button type="button" class="btn-type1 st1" onclick="popClose('#pop-bonus-Instant');">확인</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layerpopup" id="pop-extra-pay">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup">
+      <a href="javascript:void(0);" class="close type2" onclick="popClose('#pop-extra-pay');"></a>
+      <div class="pop-header">
+        <strong class="pop-tit">수당 상세</strong>
+      </div>
+      <div class="pop-body">
+        <div class="data-type3 sticky" style="max-height: 300px;">
+          <table>
+              <colgroup>
+                  <col style="width:80px">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                  <col style="width:auto">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>NO</th>
+                    <th>지급월</th>
+                    <th>금액</th>
+                    <th>수당명</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>2023-12</td>
+                  <td>1,000</td>
+                  <td>기본추가 수당</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2023-09</td>
+                  <td>2,000</td>
+                  <td>기본추가 수당</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2023-06</td>
+                  <td>1,000</td>
+                  <td>기본추가 수당</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2023-03</td>
+                  <td>1,000</td>
+                  <td>기본추가 수당</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+        <div class="btn-wrap">
+          <button type="button" class="btn-type1 st1" onclick="popClose('#pop-extra-pay');">확인</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <script>

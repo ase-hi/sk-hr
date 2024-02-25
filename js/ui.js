@@ -125,21 +125,18 @@
   function autoCompleteEvt(searchArea){
     let input  = document.querySelector(searchArea).querySelector('input');
 		let autocompleteLayer = document.querySelector('.layer-autocomplete');
+		let seEvt = false;
 
 			input.addEventListener('keyup', function(){
 				this.value.length > 0 ? autocompleteLayer.style.display = 'block' : autocompleteLayer.style.display = 'none';
 			});
 
+
 			input.addEventListener('keydown', function(){
 				if (event.keyCode === 40) {
-				setTimeout(function(event){
-					if(autocompleteLayer.style.display  == 'none') return;
 
-					// 자동완성 레이어에 대한 이벤트 핸들러 등록
-					autocompleteLayer.querySelector('a').focus();
-					event.preventDefault(); 
+					function setKeydown (event) {
 
-					autocompleteLayer.addEventListener('keydown', function(event) {
 							// 눌린 키가 화살표 위쪽 키(키 코드 38)인지 확인
 							if (event.keyCode === 38) {
 									// 이전 아이템으로 포커스를 이동
@@ -160,8 +157,17 @@
 											nextItem.focus();
 									}
 							}
-					});
+					}					
 
+					
+				setTimeout(function(event){
+					if(autocompleteLayer.style.display  == 'none') return;
+					// 자동완성 레이어에 대한 이벤트 핸들러 등록
+					autocompleteLayer.querySelector('a').focus();
+					event.preventDefault(); 
+					if(seEvt) return;
+					autocompleteLayer.addEventListener('keydown', setKeydown);
+					seEvt = true;
 					autocompleteLayer.querySelectorAll('a').forEach(function(el){
 						el.addEventListener('click', function(){
 							input.value = '';
@@ -173,8 +179,19 @@
 					}, 100, event);
 				}
 			});
-  }
 
+			//기타 닫기
+			document.addEventListener('click', function(event) {
+				var targetElement = event.target;
+				function closeLayer() {
+					autocompleteLayer.style.display = 'none'
+				}
+				
+				if (!targetElement.closest('.layer-autocomplete')) {
+						closeLayer(); 
+				}
+		});			
+  }
 
 		
 	
