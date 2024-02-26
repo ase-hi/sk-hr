@@ -418,6 +418,7 @@ body.bg-gray{background:#F2F4F6;}
 .compare-list .info-list .cont .list-tb .comment-list li .comm{fleX:1;overflow:hidden;word-break: keep-all;padding-top:3px;padding-left:10px;}
 .compare-list .info-list .cont .list-tb.st2 th,
 .compare-list .info-list .cont .list-tb.st2 td{padding:5px 5px;font-size:12px;}
+.compare-list .info-list .cont .text-area{font-size:13px;line-height:1.5;}
 .compare-list .info-list .cont .num-list > li{display:flex;}
 .compare-list .info-list .cont .num-list > li ~ li{margin-top:10px;}
 .compare-list .info-list .cont .num-list > li > .num{margin-right:10px;font-size:14px;}
