@@ -252,35 +252,44 @@
 			*/
 			let input  = $(this.selectors.search).get(0);
 			let autocompleteLayer = $(this.selectors.list).get(0);
+			let seEvt = false;
+
+				autocompleteLayer.addEventListener('keydown', function(event) {
+					seEvt = true;
+						// 눌린 키가 화살표 위쪽 키(키 코드 38)인지 확인
+						if (event.keyCode === 38) {
+								// 이전 아이템으로 포커스를 이동
+								let currentItem = document.activeElement;
+								let previousItem = currentItem.previousElementSibling;
+								if (previousItem && previousItem.classList.contains('amsify-list-item')) {
+										event.preventDefault(); // 화살표 위쪽 키의 기본 동작 방지
+										previousItem.focus();
+								}
+						}
+						// 눌린 키가 화살표 아래쪽 키(키 코드 40)인지 확인
+						else if (event.keyCode === 40) {
+								// 다음 아이템으로 포커스를 이동
+								let currentItem = document.activeElement;
+								let nextItem = currentItem.nextElementSibling;
+								if (nextItem && nextItem.classList.contains('amsify-list-item')) {
+										event.preventDefault(); // 화살표 아래쪽 키의 기본 동작 방지
+										nextItem.focus();
+								}
+						}
+				});
 
 			input.addEventListener('keydown', function(event){
-			if (event.keyCode === 40) {
-						//자동완성 레이어에 대한 이벤트 핸들러 등록
-						autocompleteLayer.querySelector('button').focus();
-						event.preventDefault(); 
-	
-						autocompleteLayer.addEventListener('keydown', function(event) {
-								// 눌린 키가 화살표 위쪽 키(키 코드 38)인지 확인
-								if (event.keyCode === 38) {
-										// 이전 아이템으로 포커스를 이동
-										let currentItem = document.activeElement;
-										let previousItem = currentItem.previousElementSibling;
-										if (previousItem && previousItem.classList.contains('amsify-list-item')) {
-												event.preventDefault(); // 화살표 위쪽 키의 기본 동작 방지
-												previousItem.focus();
-										}
-								}
-								// 눌린 키가 화살표 아래쪽 키(키 코드 40)인지 확인
-								else if (event.keyCode === 40) {
-										// 다음 아이템으로 포커스를 이동
-										let currentItem = document.activeElement;
-										let nextItem = currentItem.nextElementSibling;
-										if (nextItem && nextItem.classList.contains('amsify-list-item')) {
-												event.preventDefault(); // 화살표 아래쪽 키의 기본 동작 방지
-												nextItem.focus();
-										}
-								}
+				if (event.keyCode === 40) {
+					let firstBtn = '';
+						autocompleteLayer.querySelectorAll('button').forEach(el => {
+							if(firstBtn) return;
+							if(el.style.display != 'none') {
+								firstBtn = el;
+								return;
+							}
 						});
+						firstBtn.focus();
+						event.preventDefault(); 
 					}
 				});
 
