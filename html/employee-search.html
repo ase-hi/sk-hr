@@ -12,6 +12,7 @@
 
 <link type="text/css" rel="stylesheet" href="../css/style.css" />
 <script type="text/javascript" src="../js/ui.js"></script>
+<script type="text/javascript" src="../js/ui-pub.js"></script>
 <!-- 그리드 -->
 <link type="text/css" rel="stylesheet" href="../js/kendo-2020.3.1021/kendo.common.min.css" />
 <!-- <script type="text/javascript" src="../js/kendo-2020.3.1021/kendo.all.min.js"></script> -->
@@ -86,7 +87,28 @@
         <div class="search-box">
           <select>
             <option value="">전체</option>
-            <option value="">공지</option>
+            <option value="">SK(주)</option>
+            <option value="">SK이노베이션</option>
+            <option value="">SK하이닉스</option>
+            <option value="">SK텔레콤</option>
+            <option value="">SK E&S</option>
+            <option value="">SK에코플랜트</option>
+            <option value="">SK실트론</option>
+            <option value="">SK네트웍스</option>
+            <option value="">SKC</option>
+            <option value="">SK스퀘어</option>
+            <option value="">SK㈜ C&C</option>
+            <option value="">SK㈜ 머티리얼즈</option>
+            <option value="">SK바이오팜</option>
+            <option value="">SK디스커버리</option>
+            <option value="">SK케미칼</option>
+            <option value="">SK가스</option>
+            <option value="">SK에너지</option>
+            <option value="">SK지오센트릭</option>
+            <option value="">SK온</option>
+            <option value="">SK엔무브</option>
+            <option value="">SKIET</option>
+            <option value="">SK브로드밴드</option>
           </select>
           <div class="input-wrap">
             <input type="text" placeholder="검색어를 입력해주세요" onkeyup="this.value.length > 0 ? $('.layer-autocomplete').show() : $('.layer-autocomplete').hide() ">
@@ -121,12 +143,21 @@
       <div class="search-sub-area">
         <div class="recomend-word">
           <b>추천 검색어</b>
-          <div class="words">
-            <span>유학</span>
-            <span>파견</span>
-            <span>수상</span>
-            <span>이력</span>
-            <span>상장</span>
+          <div class="words" id="words-search">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>유학</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>파견</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>수상</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>이력</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>상장</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>유학</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>파견</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>수상</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>이력</span></a></li>
+                    <li class="swiper-slide"><a href="javascript:void(0);"><span>상장</span></a></li>
+                </ul>
+            </div>
           </div>
         </div>
         <div class="search-menu">
@@ -4664,6 +4695,13 @@ var mySwiper = new Swiper('#slide-search .swiper-container', {
 
 <script>
 
+
+  //추천검색어 슬라이드
+  var wordSwiper = new Swiper('#words-search .swiper-container', {
+      freeMode: true,
+      slidesPerView: 'auto'
+    });
+  
 
 function listToggleBtn(){
 		 $('[data-evt=listToggleBtn]').on('click', function(){
