@@ -85,31 +85,32 @@
     <div class="inner-wrap">
       <div class="search-area">
         <div class="search-box">
-          <select>
-            <option value="">전체</option>
-            <option value="">SK(주)</option>
-            <option value="">SK이노베이션</option>
-            <option value="">SK하이닉스</option>
-            <option value="">SK텔레콤</option>
-            <option value="">SK E&S</option>
-            <option value="">SK에코플랜트</option>
-            <option value="">SK실트론</option>
-            <option value="">SK네트웍스</option>
-            <option value="">SKC</option>
-            <option value="">SK스퀘어</option>
-            <option value="">SK㈜ C&C</option>
-            <option value="">SK㈜ 머티리얼즈</option>
-            <option value="">SK바이오팜</option>
-            <option value="">SK디스커버리</option>
-            <option value="">SK케미칼</option>
-            <option value="">SK가스</option>
-            <option value="">SK에너지</option>
-            <option value="">SK지오센트릭</option>
-            <option value="">SK온</option>
-            <option value="">SK엔무브</option>
-            <option value="">SKIET</option>
-            <option value="">SK브로드밴드</option>
-          </select>
+          <div class="search-select">
+            <select name="seleccompany" searchable multiple onchange="console.log($(this).val())">
+              <option value="1">SK(주)</option>
+              <option value="2">SK이노베이션</option>
+              <option value="3">SK하이닉스</option>
+              <option value="4">SK텔레콤</option>
+              <option value="5">SK E&S</option>
+              <option value="6">SK에코플랜트</option>
+              <option value="7">SK실트론</option>
+              <option value="8">SK네트웍스</option>
+              <option value="9">SKC</option>
+              <option value="10">SK스퀘어</option>
+              <option value="11">SK㈜ C&C</option>
+              <option value="12">SK㈜ 머티리얼즈</option>
+              <option value="13">SK바이오팜</option>
+              <option value="14">SK디스커버리</option>
+              <option value="15">SK케미칼</option>
+              <option value="16">SK가스</option>
+              <option value="17">SK에너지</option>
+              <option value="18">SK지오센트릭</option>
+              <option value="19">SK온</option>
+              <option value="20">SK엔무브</option>
+              <option value="21">SKIET</option>
+              <option value="22">SK브로드밴드</option>
+            </select>
+          </div>
           <div class="input-wrap">
             <input type="text" placeholder="검색어를 입력해주세요" onkeyup="this.value.length > 0 ? $('.layer-autocomplete').show() : $('.layer-autocomplete').hide() ">
             <div class="layer-autocomplete">
@@ -136,6 +137,14 @@
                 <a href="javascript:void(0);" class="autocomplete-item">20.가나다라마바<em>나다</em>자차카타파하</a>
               </div>
             </div>
+            <span class="tooltip-wrap">
+              <i class="ico-noti"></i>
+              <span class="tooltip-layer">
+                <span class="tooltip-txt">키워드 검색창은 조건을 제시할 때, "+" 기호는 해당 단어를 반드시 포함해야 함을 나타내며, 
+                  <br>"-" 기호는 해당 단어를 제외해야 함을 나타냅니다. (ex. +AI 개발자 -한국대학교)
+                </span>
+              </span>
+            </span>
           </div>
         </div>
         <button class="btn-search"><i class="ico-search"></i></button>
@@ -160,10 +169,10 @@
             </div>
           </div>
         </div>
-        <div class="search-menu">
+        <!-- <div class="search-menu">
           <button type="button" class="btn-detail" onclick="popOpen('#pop-detail-search');"><i class="ico-search-detail"></i><span>상세</span></button>
           <button type="button" class="btn-filter" onclick="popOpen('#pop-condition-search');$('.filter-select').amsifySelect({ type : 'amsify' });"><i class="ico-search-filter"></i><span>조건</span></button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -172,32 +181,15 @@
     <div class="search-filter-wrap">
       <div class="filter-section-wrap">
         <div class="filter-section">
-          <h2 class="filter-tit">상세검색</h2>
-          <div class="filter-box">
-            <ul class="chk-list">
-              <li>
-                <label class="inp-check">
-                  <input type="checkbox">
-                  <span class="ic"></span>
-                  <span class="t">단어 모두포함</span>
-                </label>
-              </li>
-              <li>
-                <label class="inp-check">
-                  <input type="checkbox">
-                  <span class="ic"></span>
-                  <span class="t">단어 제외</span>
-                </label>
-              </li>
-            </ul>
-        
-          </div>
-        </div>
-        <div class="filter-section">
-          <h2 class="filter-tit"><span>조건검색</span></h2>
+          <h2 class="filter-tit">
+            <span>필터검색</span>
+            <span class="right">
+              <button class="btn-type6 st4">확인</button>
+            </span>
+          </h2>
           <!-- 인사 조건 -->
           <div class="filter-set">
-            <h3 class="filter-tit2"><span>인사 조건</span> <button class="btn-tog"><i></i></button></h3>
+            <h3 class="filter-tit2"><span>인사 조건</span><span class="check"></span> <button class="btn-tog"><i></i></button></h3>
             <div class="filter-box-wrap">
               <div class="filter-box">
                 <div class="box-header"><b>회사명</b><span class="check"></span><button class="btn-tog"><i></i></button></div>
@@ -294,7 +286,7 @@
           </div>
           <!-- 조직 조건 -->
           <div class="filter-set">
-            <h3 class="filter-tit2"><span>조직 조건</span><button class="btn-tog"><i></i></button></h3>
+            <h3 class="filter-tit2"><span>조직 조건</span><span class="check"></span><button class="btn-tog"><i></i></button></h3>
             <div class="filter-box-wrap">
               <div class="filter-box">
                 <div class="box-header"><b>직무</b><button class="btn-tog"><i></i></button></div>
@@ -362,7 +354,7 @@
           </div>
           <!-- 보상 조건 -->
           <div class="filter-set">
-            <h3 class="filter-tit2"><span>보상 조건</span><button class="btn-tog"><i></i></button></h3>
+            <h3 class="filter-tit2"><span>보상 조건</span><span class="check"></span><button class="btn-tog"><i></i></button></h3>
             <div class="filter-box-wrap">
               <div class="filter-box">
                 <div class="box-header"><b>연봉</b><button class="btn-tog"><i></i></button></div>
@@ -403,7 +395,7 @@
           </div>
           <!-- 역량 조건 -->
           <div class="filter-set">
-            <h3 class="filter-tit2"><span>역량 조건</span><button class="btn-tog"><i></i></button></h3>
+            <h3 class="filter-tit2"><span>역량 조건</span><span class="check"></span><button class="btn-tog"><i></i></button></h3>
             <div class="filter-box-wrap">
               <div class="filter-box">
                 <div class="box-header"><b>학력</b><button class="btn-tog"><i></i></button></div>
@@ -518,7 +510,7 @@
           </div>
           <!-- 성과 조건 -->
           <div class="filter-set">
-            <h3 class="filter-tit2"><span>성과 조건</span><button class="btn-tog"><i></i></button></h3>
+            <h3 class="filter-tit2"><span>성과 조건</span><span class="check"></span><button class="btn-tog"><i></i></button></h3>
             <div class="filter-box-wrap">
               <div class="filter-box">
                 <div class="box-header"><b>평가등급</b><button class="btn-tog"><i></i></button></div>
@@ -539,6 +531,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-type3 st4">확인</button>
         </div>
       </div>
     </div>
@@ -2671,8 +2666,8 @@
             <i class="ico-search"></i>
           </div>
           <p class="txt">멤버사 선택 및 검색어 입력으로 원하시는 인재를 찾을 수 있습니다
-            <br>
-            상세검색, 조건검색을 이용하여 정확한 검색어입력이 가능합니다.
+            <!-- <br>
+            상세검색, 조건검색을 이용하여 정확한 검색어입력이 가능합니다. -->
           </p>
           <p class="txt">"키워드 검색"에 대해 총 <em>0</em>건이 검색 되었습니다.</p>
         </div>
@@ -4834,6 +4829,7 @@ function listToggleBtn(){
     //자동완성
     autoCompleteEvt('.employee-search-wrap .search-area');
 
+    $('.search-select select').amsifySelect({ type : 'amsify' });
 </script>
 
 </body>

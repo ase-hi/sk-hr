@@ -79,31 +79,32 @@
        <!-- main-search-box -->
        <div class="main-search-box">
         <div class="search-area">
-          <select>
-            <option value="">전체</option>
-            <option value="">SK(주)</option>
-            <option value="">SK이노베이션</option>
-            <option value="">SK하이닉스</option>
-            <option value="">SK텔레콤</option>
-            <option value="">SK E&S</option>
-            <option value="">SK에코플랜트</option>
-            <option value="">SK실트론</option>
-            <option value="">SK네트웍스</option>
-            <option value="">SKC</option>
-            <option value="">SK스퀘어</option>
-            <option value="">SK㈜ C&C</option>
-            <option value="">SK㈜ 머티리얼즈</option>
-            <option value="">SK바이오팜</option>
-            <option value="">SK디스커버리</option>
-            <option value="">SK케미칼</option>
-            <option value="">SK가스</option>
-            <option value="">SK에너지</option>
-            <option value="">SK지오센트릭</option>
-            <option value="">SK온</option>
-            <option value="">SK엔무브</option>
-            <option value="">SKIET</option>
-            <option value="">SK브로드밴드</option>
-          </select>
+          <div class="search-select">
+            <select name="seleccompany" searchable multiple onchange="console.log($(this).val())">
+              <option value="1">SK(주)</option>
+              <option value="2">SK이노베이션</option>
+              <option value="3">SK하이닉스</option>
+              <option value="4">SK텔레콤</option>
+              <option value="5">SK E&S</option>
+              <option value="6">SK에코플랜트</option>
+              <option value="7">SK실트론</option>
+              <option value="8">SK네트웍스</option>
+              <option value="9">SKC</option>
+              <option value="10">SK스퀘어</option>
+              <option value="11">SK㈜ C&C</option>
+              <option value="12">SK㈜ 머티리얼즈</option>
+              <option value="13">SK바이오팜</option>
+              <option value="14">SK디스커버리</option>
+              <option value="15">SK케미칼</option>
+              <option value="16">SK가스</option>
+              <option value="17">SK에너지</option>
+              <option value="18">SK지오센트릭</option>
+              <option value="19">SK온</option>
+              <option value="20">SK엔무브</option>
+              <option value="21">SKIET</option>
+              <option value="22">SK브로드밴드</option>
+            </select>
+          </div>
           <div class="input">
             <input type="text" placeholder="검색어를 입력해주세요">
             <div class="layer-autocomplete">
@@ -130,6 +131,14 @@
                 <a href="javascript:void(0);" class="autocomplete-item">20.가나다라마바<em>나다</em>자차카타파하</a>
               </div>
             </div>
+            <span class="tooltip-wrap">
+              <i class="ico-noti"></i>
+              <span class="tooltip-layer">
+                <span class="tooltip-txt">키워드 검색창은 조건을 제시할 때, "+" 기호는 해당 단어를 반드시 포함해야 함을 나타내며, 
+                  <br>"-" 기호는 해당 단어를 제외해야 함을 나타냅니다. (ex. +AI 개발자 -한국대학교)
+                </span>
+              </span>
+            </span>
           </div>
           <div class="btn-search"><i class="ico-search"></i><span>검색</span></div>
         </div>
@@ -149,14 +158,22 @@
                       <li class="swiper-slide"><a href="javascript:void(0);"><span>수상</span></a></li>
                       <li class="swiper-slide"><a href="javascript:void(0);"><span>이력</span></a></li>
                       <li class="swiper-slide"><a href="javascript:void(0);"><span>상장</span></a></li>
+                      <li class="swiper-slide"><a href="javascript:void(0);"><span>수상</span></a></li>
+                      <li class="swiper-slide"><a href="javascript:void(0);"><span>이력</span></a></li>
+                      <li class="swiper-slide"><a href="javascript:void(0);"><span>상장</span></a></li>
+                      <li class="swiper-slide"><a href="javascript:void(0);"><span>유학</span></a></li>
+                      <li class="swiper-slide"><a href="javascript:void(0);"><span>파견</span></a></li>
+                      <li class="swiper-slide"><a href="javascript:void(0);"><span>수상</span></a></li>
+                      <li class="swiper-slide"><a href="javascript:void(0);"><span>이력</span></a></li>
+                      <li class="swiper-slide"><a href="javascript:void(0);"><span>상장</span></a></li>
                   </ul>
               </div>
             </div>
           </div>
-          <div class="search-menu">
+          <!-- <div class="search-menu">
             <button type="button" class="btn-detail" onclick="popOpen('#pop-detail-search');"><i class="ico-search-detail"></i><span>상세</span><em></em></button>
             <button type="button" class="btn-filter" onclick="popOpen('#pop-condition-search');$('.filter-select').amsifySelect({ type : 'amsify' });"><i class="ico-search-filter"></i><span>조건</span><em></em></button>
-          </div>
+          </div> -->
         </div>
        </div>
        <!-- // main-search-box -->
@@ -697,7 +714,7 @@
 
 
 <script>
-  
+
   var wordSwiper = new Swiper('#words-search .swiper-container', {
       freeMode: true,
       slidesPerView: 'auto'
@@ -722,6 +739,7 @@
   //자동완성
   autoCompleteEvt('.main-search-box .search-area');
 
+  $('.search-select select').amsifySelect({ type : 'amsify' });
   </script>
 
 </body>
