@@ -237,40 +237,54 @@
               </select>
             </div>
           </dt>
-          <dd>
-            <div class="static-box">
-              <ul class="static-list">
-                <li>
-                  <b>322</b>
-                  <span class="updown"><span>30</span><i class="ico-up"></i></span>
-                  <span class="txt">재직자</span>
-                </li>
-                <li>
-                  <b>30</b>
-                  <span class="updown"><span>20</span><i class="ico-down"></i></span>
-                  <span class="txt">남성재직자</span>
-                </li>
-                <li>
-                  <b>5</b>
-                  <span class="updown"><span>1</span><i class="ico-up"></i></span>
-                  <span class="txt">여성재직자</span>
-                </li>
-                <li>
-                  <b>7</b>
-                  <span class="updown"><span>2</span><i class="ico-down"></i></span>
-                  <span class="txt">입사자</span>
-                </li>
-                <li>
-                  <b>50</b>
-                  <span class="updown"><span>15</span><i class="ico-down"></i></span>
-                  <span class="txt">퇴사자</span>
-                </li>
-                <li>
-                  <b>100</b>
-                  <span class="updown"><span>3</span><i class="ico-up"></i></span>
-                  <span class="txt">휴직자</span>
-                </li>
-              </ul>
+          <dd>            
+            <div class="static-box" id="statics">
+              <div class="swiper-container">
+                <ul class="static-list swiper-wrapper">
+                  <li class="swiper-slide">
+                    <b>322</b>
+                    <span class="updown"><span>30</span><i class="ico-up"></i></span>
+                    <span class="txt">재직자</span>
+                  </li>
+                  <li class="swiper-slide">
+                    <b>30</b>
+                    <span class="updown"><span>20</span><i class="ico-down"></i></span>
+                    <span class="txt">남성재직자</span>
+                  </li>
+                  <li class="swiper-slide">
+                    <b>5</b>
+                    <span class="updown"><span>1</span><i class="ico-up"></i></span>
+                    <span class="txt">여성재직자</span>
+                  </li>
+                  <li class="swiper-slide">
+                    <b>7</b>
+                    <span class="updown"><span>2</span><i class="ico-down"></i></span>
+                    <span class="txt">입사자</span>
+                  </li>
+                  <li class="swiper-slide">
+                    <b>50</b>
+                    <span class="updown"><span>15</span><i class="ico-down"></i></span>
+                    <span class="txt">퇴사자</span>
+                  </li>
+                  <li class="swiper-slide">
+                    <b>100</b>
+                    <span class="updown"><span>3</span><i class="ico-up"></i></span>
+                    <span class="txt">휴직자</span>
+                  </li>
+                  <li class="swiper-slide">
+                    <b>50</b>
+                    <span class="updown"><span>15</span><i class="ico-down"></i></span>
+                    <span class="txt">퇴사자</span>
+                  </li>
+                  <li class="swiper-slide">
+                    <b>100</b>
+                    <span class="updown"><span>3</span><i class="ico-up"></i></span>
+                    <span class="txt">휴직자</span>
+                  </li>
+                </ul>
+              </div>
+              <button class="swiper-button-prev"></button>
+              <button class="swiper-button-next"></button>
             </div>
           </dd>
         </dl>
@@ -718,6 +732,14 @@
   var wordSwiper = new Swiper('#words-search .swiper-container', {
       freeMode: true,
       slidesPerView: 'auto'
+    });
+
+  var staticsSwiper = new Swiper('#statics .swiper-container', {
+      slidesPerView: 6,
+      navigation: {
+        nextEl: "#statics .swiper-button-next",
+        prevEl: "#statics .swiper-button-prev",
+      },
     });
   
 

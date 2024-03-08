@@ -184,7 +184,7 @@
           <h2 class="filter-tit">
             <span>필터검색</span>
             <span class="right">
-              <button class="btn-type6 st4">확인</button>
+              <button class="btn-type6 st1">확인</button>
             </span>
           </h2>
           <!-- 인사 조건 -->
@@ -221,9 +221,6 @@
                         <option value="22">SK브로드밴드</option>
                       </select>
                     </div>
-                    <div class="right">
-                      <button class="btn-type3 st1">확인</button>
-                    </div>
                   </div>
                   <ul class="selected-list">
                     <li><span class="txt">SK머티리얼즈</span><button class="del"></button></li>
@@ -232,7 +229,7 @@
                 </div>
               </div>
               <div class="filter-box">
-                <div class="box-header"><b>사원유형</b><button class="btn-tog"><i></i></button></div>
+                <div class="box-header"><b>직원유형</b><button class="btn-tog"><i></i></button></div>
                 <div class="box-body">
                   <ul class="chk-list">
                     <li>
@@ -272,9 +269,6 @@
                         <option value="5">영국</option>
                       </select>
                     </div>
-                    <div class="right">
-                      <button class="btn-type3 st1">확인</button>
-                    </div>
                   </div>
                   <ul class="selected-list">
                     <li><span class="txt">스페인</span><button class="del"></button></li>
@@ -300,9 +294,6 @@
                           <option value="4">직무4</option>
                         </select>
                       </div>
-                      <div class="right">
-                        <button class="btn-type3 st1">확인</button>
-                      </div>
                     </div>
                     <ul class="selected-list">
                       <li><span class="txt">개발</span><button class="del"></button></li>
@@ -323,9 +314,6 @@
                           <option value="4">직책4</option>
                         </select>
                       </div>
-                      <div class="right">
-                        <button class="btn-type3 st1">확인</button>
-                      </div>
                     </div>
                     <ul class="selected-list">
                       <li><span class="txt">직책1</span><button class="del"></button></li>
@@ -344,10 +332,25 @@
                           <option value="4">근무지4</option>
                         </select>
                       </div>
-                      <div class="right">
-                        <button class="btn-type3 st1">확인</button>
-                      </div>
                     </div>
+                </div>
+              </div>
+              <div class="filter-box">
+                <div class="box-header"><b>입사전 회사</b><button class="btn-tog"><i></i></button></div>
+                <div class="box-body">
+                  <div class="f-wrap">
+                    <div class="auto">
+                      <select class="filter-select" name="country" searchable>
+                        <option value="1">대학교명1</option>
+                        <option value="2">대학교명2</option>
+                        <option value="3">대학교명3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <ul class="selected-list">
+                    <li><span class="txt">대학교명1</span><button class="del"></button></li>
+                    <li><span class="txt">대학교명2</span><button class="del"></button></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -450,30 +453,6 @@
                         <option value="3">대학교명3</option>
                       </select>
                     </div>
-                    <div class="right">
-                      <button class="btn-type3 st1">확인</button>
-                    </div>
-                  </div>
-                  <ul class="selected-list">
-                    <li><span class="txt">대학교명1</span><button class="del"></button></li>
-                    <li><span class="txt">대학교명2</span><button class="del"></button></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="filter-box">
-                <div class="box-header"><b>입사전 근무지</b><button class="btn-tog"><i></i></button></div>
-                <div class="box-body">
-                  <div class="f-wrap">
-                    <div class="auto">
-                      <select class="filter-select" name="country" searchable>
-                        <option value="1">대학교명1</option>
-                        <option value="2">대학교명2</option>
-                        <option value="3">대학교명3</option>
-                      </select>
-                    </div>
-                    <div class="right">
-                      <button class="btn-type3 st1">확인</button>
-                    </div>
                   </div>
                   <ul class="selected-list">
                     <li><span class="txt">대학교명1</span><button class="del"></button></li>
@@ -500,9 +479,6 @@
                           <option value="">시험명3</option>
                         </select>
                       </div>
-                      <div class="right">
-                        <button class="btn-type3 st1">확인</button>
-                      </div>
                     </div>
                 </div>
               </div>
@@ -517,14 +493,12 @@
                 <div class="box-body">
                   <div class="f-wrap">
                     <div class="auto">
-                      <select>
-                        <option value="">A+</option>
-                        <option value="">A</option>
-                        <option value="">B</option>
+                      <select class="filter-select" name="result" searchable multiple onchange="console.log($(this).val())">
+                        <option value="1">A+</option>
+                        <option value="2">A</option>
+                        <option value="3">B</option>
+                        <option value="4">C</option>
                       </select>
-                    </div>
-                    <div class="right">
-                      <button class="btn-type3 st1">확인</button>
                     </div>
                   </div>
                 </div>
@@ -533,7 +507,7 @@
           </div>
         </div>
         <div class="btn-wrap">
-          <button type="button" class="btn-type3 st4">확인</button>
+          <div class="right"><button type="button" class="btn-type6 st1">확인</button></div>
         </div>
       </div>
     </div>
@@ -646,7 +620,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 성균관대학교 / 컴퓨터공학</span>
+                      <span class="etc-info">학사 / 성균관대학교 / 컴퓨터공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -675,42 +649,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>현민수</span>
-                          <span>HYUN M S</span>
-                          <span>DT추진팀</span>
-                          <span>남</span>
-                          <span>1984-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>성균관대학교</span>
-                          <span>컴퓨터공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK네트웍스</span>
+                            <span>기업문화실</span>
                             <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -745,7 +713,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 고려대학교 / 통계학</span>
+                      <span class="etc-info">학사 / 고려대학교 / 통계학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -774,42 +742,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>김병기</span>
-                          <span>HYUN M S</span>
-                          <span>Talent Management팀</span>
-                          <span>남</span>
-                          <span>1992-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>고려대학교</span>
-                          <span>통계학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK주식회사C&amp;C</span>
-                            <span>Talent Management팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -844,7 +806,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 서강대학교 / 물류시스템공학</span>
+                      <span class="etc-info">학사 / 서강대학교 / 물류시스템공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -873,42 +835,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>박대영</span>
-                          <span>HYUN M S</span>
-                          <span>정보기술팀</span>
-                          <span>남</span>
-                          <span>1988-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>서강대학교</span>
-                          <span>물류시스템공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK에코플랜트</span>
-                            <span>정보기술팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -943,7 +899,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 홍익대학교 / 컴퓨터공학</span>
+                      <span class="etc-info">학사 / 홍익대학교 / 컴퓨터공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -972,42 +928,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>김병용</span>
-                          <span>HYUN M S</span>
-                          <span>DX Lab</span>
-                          <span>남</span>
-                          <span>1993-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>홍익대학교</span>
-                          <span>컴퓨터공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK디스커버리</span>
-                            <span>DX Lab</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1042,7 +992,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 동국대학교 / 문헌정보학</span>
+                      <span class="etc-info">학사 / 동국대학교 / 문헌정보학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1071,42 +1021,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>안택준</span>
-                          <span>HYUN M S</span>
-                          <span>최적운영기획</span>
-                          <span>남</span>
-                          <span>1983-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>동국대학교</span>
-                          <span>문헌정보학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK에너지</span>
-                            <span>최적운영기획</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1141,7 +1085,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">석사졸업 / 숭실대학교 / 통계학</span>
+                      <span class="etc-info">석사 / 숭실대학교 / 통계학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1170,42 +1114,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>정형렬</span>
-                          <span>HYUN M S</span>
-                          <span>데이터팀</span>
-                          <span>남</span>
-                          <span>1976-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>석사졸업</span>
-                          <span>숭실대학교</span>
-                          <span>통계학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK쉴더스</span>
-                            <span>데이터팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1240,7 +1178,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">박사졸업 / 서울대학교 / 전기전자공학</span>
+                      <span class="etc-info">박사 / 서울대학교 / 전기전자공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1269,42 +1207,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>노안호</span>
-                          <span>HYUN M S</span>
-                          <span>DX Offering팀</span>
-                          <span>남</span>
-                          <span>1990-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>박사졸업</span>
-                          <span>서울대학교</span>
-                          <span>전기전자공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK주식회사C&amp;C</span>
-                            <span>DX Offering팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1339,7 +1271,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 서강대학교 / 검퓨터과학</span>
+                      <span class="etc-info">학사 / 서강대학교 / 검퓨터과학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1368,42 +1300,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>이장욱</span>
-                          <span>HYUN M S</span>
-                          <span>DT추진담당</span>
-                          <span>남</span>
-                          <span>1985-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>서강대학교</span>
-                          <span>검퓨터과학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK이노베이션</span>
-                            <span>DT추진담당</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1438,7 +1364,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 아주대학교 / 검퓨터공학</span>
+                      <span class="etc-info">학사 / 아주대학교 / 검퓨터공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1467,42 +1393,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>김민지</span>
-                          <span>HYUN M S</span>
-                          <span>경영정보 Unit</span>
-                          <span>여</span>
-                          <span>1991-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>아주대학교</span>
-                          <span>검퓨터공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK온</span>
-                            <span>경영정보 Unit</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1537,7 +1457,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">석사졸업 / 서울대학교 / 소프트웨어공학</span>
+                      <span class="etc-info">석사 / 서울대학교 / 소프트웨어공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1566,42 +1486,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>김현승</span>
-                          <span>HYUN M S</span>
-                          <span>DT팀</span>
-                          <span>남</span>
-                          <span>1982-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>석사졸업</span>
-                          <span>서울대학교</span>
-                          <span>소프트웨어공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SKC</span>
-                            <span>DT팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1636,7 +1550,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">석사졸업 / KAIST / 컴퓨터공학</span>
+                      <span class="etc-info">석사 / KAIST / 컴퓨터공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1735,7 +1649,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 숭실대학교 / 정보통신공학</span>
+                      <span class="etc-info">학사 / 숭실대학교 / 정보통신공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1764,42 +1678,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>이인교</span>
-                          <span>HYUN M S</span>
-                          <span>본사부</span>
-                          <span>남</span>
-                          <span>1996-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>숭실대학교</span>
-                          <span>정보통신공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK네트웍스</span>
-                            <span>본사부</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1834,7 +1742,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 경기대학교 / 경영학</span>
+                      <span class="etc-info">학사 / 경기대학교 / 경영학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1863,42 +1771,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>최선도</span>
-                          <span>HYUN M S</span>
-                          <span>Eco Eng. DX팀</span>
-                          <span>여</span>
-                          <span>1985-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>경기대학교</span>
-                          <span>경영학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK에코플랜트</span>
-                            <span>Eco Eng. DX팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -1933,7 +1835,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">석사졸업 / 한양대학교 / 컴퓨터과학</span>
+                      <span class="etc-info">석사 / 한양대학교 / 컴퓨터과학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -1962,42 +1864,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>방형수</span>
-                          <span>HYUN M S</span>
-                          <span>DX팀</span>
-                          <span>남</span>
-                          <span>1989-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>석사졸업</span>
-                          <span>한양대학교</span>
-                          <span>컴퓨터과학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK바이오사이언스</span>
-                            <span>DX팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -2032,7 +1928,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">석사졸업 / 성균관대학교 / 전기/전자</span>
+                      <span class="etc-info">석사 / 성균관대학교 / 전기/전자</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -2061,42 +1957,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>김승진</span>
-                          <span>HYUN M S</span>
-                          <span>SW Engineering</span>
-                          <span>남</span>
-                          <span>1979-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>석사졸업</span>
-                          <span>성균관대학교</span>
-                          <span>전기/전자</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK하이닉스</span>
-                            <span>SW Engineering</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -2131,7 +2021,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 부산대학교 / 통계학</span>
+                      <span class="etc-info">학사 / 부산대학교 / 통계학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -2160,42 +2050,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>최서준</span>
-                          <span>HYUN M S</span>
-                          <span>HR팀(O&amp;M)</span>
-                          <span>남</span>
-                          <span>1999-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>부산대학교</span>
-                          <span>통계학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK E&amp;S</span>
-                            <span>HR팀(O&amp;M)</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -2230,7 +2114,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 이화여자대학교 / 물리학</span>
+                      <span class="etc-info">학사 / 이화여자대학교 / 물리학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -2259,42 +2143,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>장성희</span>
-                          <span>HYUN M S</span>
-                          <span>SHE/인프라지원팀</span>
-                          <span>여</span>
-                          <span>1992-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>이화여자대학교</span>
-                          <span>물리학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK넥실리스</span>
-                            <span>SHE/인프라지원팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -2329,7 +2207,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">석사졸업 / 고려대학교 / 산업공학</span>
+                      <span class="etc-info">석사 / 고려대학교 / 산업공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -2358,42 +2236,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>김보경</span>
-                          <span>HYUN M S</span>
-                          <span>IT운영팀</span>
-                          <span>여</span>
-                          <span>1992-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>석사졸업</span>
-                          <span>고려대학교</span>
-                          <span>산업공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK매직</span>
-                            <span>IT운영팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -2428,7 +2300,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">학사졸업 / 연세대학교 / 시스템공학</span>
+                      <span class="etc-info">학사 / 연세대학교 / 시스템공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -2457,42 +2329,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>최태학</span>
-                          <span>HYUN M S</span>
-                          <span>SK플라즈마 전략기획팀</span>
-                          <span>남</span>
-                          <span>1994-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>학사졸업</span>
-                          <span>연세대학교</span>
-                          <span>시스템공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK케미칼</span>
-                            <span>SK플라즈마 전략기획팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -2527,7 +2393,7 @@
                       </div>
                     </div>
                     <div class="cell cell-etc-info">
-                      <span class="etc-info">석사졸업 / 연세대학교 / 정보통신공학</span>
+                      <span class="etc-info">석사 / 연세대학교 / 정보통신공학</span>
                     </div>
                     <div class="cell cell-keyword">
                       <div class="row">
@@ -2556,42 +2422,36 @@
                       <li>
                         <b class="tit"><span>개인정보</span></b>
                         <div class="info">
-                          <span>배장엽</span>
-                          <span>HYUN M S</span>
-                          <span>Infra Engineering팀</span>
-                          <span>남</span>
-                          <span>1987-01-01</span>
-                          <span>미/기혼</span>
-                          <span>KOR</span>
-                          <span><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></span>
+                          <span>1904-01-01</span>
+                          <span>기혼</span>
+                          <span>대한민국</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>역량</span></b>
                         <div class="info">
-                          <span>석사졸업</span>
-                          <span>연세대학교</span>
-                          <span>정보통신공학</span>
+                          <span>영어/TOEIC/980</span>
+                          <span>건설안전기술사/한국산업인력공단</span>
                         </div>
                       </li>
                       <li>
                         <b class="tit"><span>조직</span></b>
                         <div class="info">
                           <div class="info">
-                            <span>SK텔레콤</span>
-                            <span>Infra Engineering팀</span>
+                            <span>기업문화실</span>
+                            <span>DT추진팀</span>
+                            <span>정규직</span>
+                            <span>팀원/대리</span>
+                            <span>개발</span>
+                            <span><span class="acc-unit">KRW</span><span>180,000,000</span></span>
                         </div>
                       </div></li>
                       <li>
                         <b class="tit"><span>성과</span></b>
                         <div class="info">
-                         <span>전사 데이터 통합 Project 구축</span>
-                        </div>
-                      </li>
-                      <li>
-                        <b class="tit"><span>보상</span></b>
-                        <div class="info">
-                          <span>12,700 만원</span>
+                         <span>2023/A</span>
+                         <span>2022/S</span>
+                         <span>2021/B</span>
                         </div>
                       </li>
                     </ul>
@@ -2680,7 +2540,7 @@
 </div>
 <!-- // wrapper -->
 
-<button type="button" class="btn-employee-compare" onclick="popOpen('#pop-employee-search');"><span class="txt">인재<br>비교</span><i class="ico-employee-compare"></i></button>
+<button type="button" class="btn-employee-compare" onclick="popOpen('#pop-employee-search');employeeSearchCallback()"><span class="txt">인재<br>비교</span><i class="ico-employee-compare"></i></button>
 
 
 <div class="layerpopup" id="pop-employee-folder">
@@ -2786,12 +2646,12 @@
       </div>
       <div class="pop-body">
         <div class="tab-type1">
-          <button type="button" class="on">전체</button>
-          <button type="button">인사</button>
-          <button type="button">조직</button>
-          <button type="button">보상</button>
-          <button type="button">역량</button>
-          <button type="button">성과</button>
+          <button type="button" class="on" data-btn-open="total">전체</button>
+          <button type="button" data-btn-open="person">인사</button>
+          <button type="button" data-btn-open="group">조직</button>
+          <button type="button" data-btn-open="compensation">보상</button>
+          <button type="button" data-btn-open="ability">역량</button>
+          <button type="button" data-btn-open="result">성과</button>
         </div>
         <!-- compare-list-wrap -->
         <div class="compare-list-wrap">
@@ -2799,501 +2659,135 @@
               <div class="box fixed">
                 <button class="btn-pin"></button>
                 <button class="btn-del"></button>
-                <div class="thumb"><img src="../images/temp-photo2.jpg" alt=""></div>
+                <div class="thumb-desc">
+                  <div class="thumb"><img src="../images/temp-photo2.jpg" alt=""></div>
+                  <div class="desc">
+                    <div class="basic"><b class="name">현민수</b><span class="info">(남, 만40세)</span></div>
+                    <div class="belong">SK네트웍스</div>
+                    <div class="team">DT추진팀/팀장</div>
+                  </div>
+                </div>
                 <div class="info-list">
-                  <dl id="quick1">
+                  <dl data-open="person">
                     <dt><span>인사</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>인적사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">이름, 영문명, 한자명, 생년월일, 결혼유무, 국적, E-Mail, 이동전화 </span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>인적사항</b></div>
                       <div class="cont">
                         <ul class="list">
-                          <li>현민수</li>
-                          <li>Hyun Minsoo</li>
-                          <li>儇旻殊</li>
-                          <li>1983-09-23</li>
-                          <li>기혼</li>
-                          <li>대한민국</li>
-                          <li><a href="mailto:ms_h123523@sk.com" class="link">ms_h123523@sk.com</a></li>
-                          <li>010-2342-5678</li>
-                        </ul>
-                      </div>
-                      <div class="tit"><b>현소속정보</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">회사명, 부서명, 직원유형, 직위/직책, 입사일, 그룹입사일, 발령일자 </span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="list">
-                          <li>SK네트웍스</li>
-                          <li>DT추진팀</li>
-                          <li>정규직</li>
-                          <li>팀장/팀장</li>
-                          <li>2020-09-10</li>
-                          <li>2010-05-17</li>
-                          <li>2023-01-01</li>
-                        </ul>
-                      </div>
-                      <div class="tit"><b>주소</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">주민등록지, 실거주지</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="list">
-                          <li>서울시 강남구 일원동 121-12</li>
-                          <li>경기도 수원시 영통구 미래동 레미안아파트 1210동 23호</li>
-                        </ul>
-                      </div>
-                      <div class="tit"><b>가족정보</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">가족관계,	이름,	성별,	생년월일</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>부</li>
-                              <li>현대용</li>
-                              <li>남</li>
-                              <li>1957-01-03</li>
-                            </ul>
-                          </li>
-    
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>모</li>
-                              <li>김영자</li>
-                              <li>여</li>
-                              <li>1955-05-05</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>배우자</li>
-                              <li>채하연</li>
-                              <li>여</li>
-                              <li>1981-11-30</li>
-                            </ul>
-                          </li>
+                          <li><b>생년월일</b><span>1983-09-23</span></li>
+                          <li><b>결혼유뮤</b><span>기혼</span></li>
+                          <li><b>국적</b><span>대한민국</span></li>
+                          <li><b>직원유형</b><span>정규직</span></li>
+                          <li><b>직책/직위</b><span>팀장/팀장</span></li>
+                          <li><b>직무</b><span>팀장/팀장</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl id="quick2">
+                  <dl data-open="group">
                     <dt><span>조직</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>입사후 경력</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">발령일자,	발령구분,	부서명,	직책,	직위,	근무지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>발령내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2023-01-01</li>
-                              <li>정기인사</li>
-                              <li>DT추진팀</li>
-                              <li>팀장</li>
-                              <li>팀장</li>
-                              <li>서울</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2022-01-01</li>
-                              <li>정기인사</li>
-                              <li>DT추진팀</li>
-                              <li>팀원</li>
-                              <li>매니저</li>
-                              <li>서울</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2020-09-10</li>
-                              <li>관계사전입</li>
-                              <li>정보보호팀</li>
-                              <li>팀원</li>
-                              <li>매니저</li>
-                              <li>서울</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>발령일자</b><span>1983-09-23</span></li>
+                          <li><b>발령구분</b><span>정기인사</span></li>
+                          <li><b>부서명</b><span>DT추진팀</span></li>
+                          <li><b>직책/직위</b><span>팀장/팀장</span></li>
+                          <li><b>근무지</b><span>서울</span></li>
                         </ul>
                       </div>
-                      <div class="tit"><b>입사 전 경력</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">회사명,	입사일자,	퇴사일자,	부서명,	직책,	직위,	근무지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>입사 전 경력</b> </div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>SK매직</li>
-                              <li>2010-05-17</li>
-                              <li>2016-09-11</li>
-                              <li>IT개발팀</li>
-                              <li>팀원</li>
-                              <li>매니저</li>
-                              <li>서울</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>회사명</b><span>SK매직</span></li>
+                          <li><b>입사일자</b><span>1983-09-23</span></li>
+                          <li><b>퇴사일자</b><span>2023-09-23</span></li>
+                          <li><b>부서명</b><span>DT추진팀</span></li>
+                          <li><b>직책/직위</b><span>팀원/매니저</span></li>
                         </ul>
                       </div>     
     
                     </dd>
                   </dl>
-                  <dl id="quick3">
+                  <dl data-open="compensation">
                     <dt><span>보상</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>급여</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">연봉시작원 종료원 연봉금액(천원), 기준월, 수당금액(천원), 숫당명, 보너스 지급원, 보너스 금액(천원), 보너스 명, 일회성 보너스 지급원, 일회성 보너스 지급 금액(천원), 욀회성 보너스 명</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>급여내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>기준년도</b><span>2023</span></li>
+                          <li><b>총액</b><span class="align-r"><span class="acc-unit">KRW</span>100,000,000</span></li>
+                          <li><b>연봉</b><span class="align-r"><span class="acc-unit">KRW</span>80,000,000</span></li>
+                          <li><b>수당</b><span class="align-r"><span class="acc-unit">KRW</span>3,000,000</span></li>
+                          <li><b>성과급</b><span class="align-r">-</span></li>
+                          <li><b>일회성지급</b><span class="align-r"><span class="acc-unit">KRW</span>2,000,000</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl id="quick4">
+                  <dl data-open="ability">
                     <dt><span>역량</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>학력사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	입학일자,	졸업일자,	학교명,	전공,	학위,	소재지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>학력사항</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>대학교</li>
-                              <li>2017-01-01 ~ 2020-12-31</li>
-                              <li>성균관대학교</li>
-                              <li>전자전기컴퓨터</li>
-                              <li>학사</li>
-                              <li>수원</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>고등학교</li>
-                              <li>1999-03-02</li>
-                              <li>2002-02-12</li>
-                              <li>고덕외국어고등학교</li>
-                              <li>스페인어</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>중학교</li>
-                              <li>1996-03-02</li>
-                              <li>1999-02-12</li>
-                              <li>영채중학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-    
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>초등학교</li>
-                              <li>1990-03-02</li>
-                              <li>1996-02-23</li>
-                              <li>명회초등학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-    
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>학위</b><span>석사</span></li>
+                          <li><b>학교명</b><span>서울대학교</span></li>
+                          <li><b>전공</b><span>M&A</span></li>
+                          <li><b>졸업일자</b><span>2008-02-17</span></li>
                         </ul>
                       </div>
                 
-                      <div class="tit"><b>교육사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">교육기간, 구분, 교육명, 교육기관, 특이사항</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>외국어</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2021-01-01~ 2023-02-01</li>
-                              <li>이수</li>
-                              <li>BigData 처리와 R</li>
-                              <li> 한국기술교육</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2017-01-01~ 2020-12-31</li>
-                              <li>이수</li>
-                              <li>JAVA 고급과정</li>
-                              <li> 솔데스크</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>언어</b><span>영어</span></li>
+                          <li><b>시험명</b><span>TOEIC</span></li>
+                          <li><b>등급</b><span>-</span></li>
+                          <li><b>점수</b><span>980</span></li>
+                          <li><b>취득일자</b><span>2008-02-17</span></li>
                         </ul>
                       </div>
               
-                      <div class="tit"><b>외국어</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	시험명,	점수</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>자격사항</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>영어</li>
-                              <li>TOEIC</li>
-                              <li>980</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                 
-                      <div class="tit"><b>자격면허</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	발급처,	취득일자</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>운전면허 1종 보통</li>
-                              <li>서울경찰청</li>
-                              <li>2010-01-21</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>자격명</b><span>운전면허 1종 보통</span></li>
+                          <li><b>발급처</b><span>서울경찰청</span></li>
+                          <li><b>취득일자</b><span>-</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl id="quick5">
+                  <dl data-open="result">
                     <dt><span>성과</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>평가</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">평가년도,	업적,	역량,	종합,	Comment</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>평가</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>2023</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>자신의 아이디어에 대한 특징이나 장점 기대효과를 명확히 설명명하고 이해시킴</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2022</li>
-                              <li>A</li>
-                              <li>S</li>
-                              <li>A</li>
-                              <li>고객이 확신을 갖고 동의할 수 있도록 구체적인 의사를 전달하고 목표를 다함</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2021</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>이견을 제시할 경우 의견을 받아들이되 여러가지 설득적인 논리를 찾아내어 제시</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2020</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>마케팅 전략 수립 시 각각의 제품 이미지에 맞는 차별화된 전략을 수립</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>기준년도</b><span>20023</span><span>20022</span><span>20021</span></li>
+                          <li><b>종합</b><span>S</span><span>A</span><span>A</span></li>
+                          <li><b>업적</b><span>S</span><span>B</span><span>A</span></li>
+                          <li><b>역량</b><span>S</span><span>A</span><span>B</span></li>
                         </ul>
                       </div>                  
-                      <div class="tit"><b>Project/Task</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">수행년도,	Project/Task,	수행 실적,	Comment</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>포상내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2023</li>
-                              <li>전사 데이터 통합 Project 구축</li>
-                              <li>Project 성공 수행</li>
-                              <li>리더나 고객이 요청하는 업무에 대해 기간 내에 완수할 뿐 아니라 중간 보고를 통한 일처리 방향을 공유함</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>포상일자</b><span>2023-12-20</span></li>
+                          <li><b>포상명</b><span>격려금</span></li>
+                          <li><b>수여기관</b><span>SK네트웍스</span></li>
+                          <li><b>내/외부</b><span>내부</span></li>
                         </ul>
                       </div>
-                      <div class="tit"><b>상벌사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">일자, 구분, 유형, 내용, 재정권자</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>징계내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2023-12-20</li>
-                              <li>상</li>
-                              <li>성과급 지급</li>
-                              <li>Project 성공 수행</li>
-                              <li>본부장</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>징계시작</b><span>2023-12-20</span></li>
+                          <li><b>징계종료</b><span>2023-12-30</span></li>
+                          <li><b>징계구뷴</b><span>징계징계</span></li>
+                          <li><b>징계사유</b><span>징계를 받음</span></li>
                         </ul>
                       </div>
                       
@@ -3304,434 +2798,136 @@
               <div class="box">
                 <button class="btn-pin"></button>
                 <button class="btn-del"></button>
-                <div class="thumb"><img src="../images/temp-photo6.jpg" alt=""></div>
+                <div class="thumb-desc">
+                  <div class="thumb"><img src="../images/temp-photo6.jpg" alt=""></div>
+                  <div class="desc">
+                    <div class="basic"><b class="name">김병기</b><span class="info">(남, 만40세)</span></div>
+                    <div class="belong">SK네트웍스</div>
+                    <div class="team">DT추진팀/팀장</div>
+                  </div>
+                </div>
                 <div class="info-list">
-                  <dl>
+                  <dl data-open="person">
                     <dt><span>인사</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>인적사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">이름, 영문명, 한자명, 생년월일, 결혼유무, 국적, E-Mail, 이동전화 </span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>인적사항</b></div>
                       <div class="cont">
                         <ul class="list">
-                          <li>김병기</li>
-                          <li>Kim ByungKi</li>
-                          <li>金炳技</li>
-                          <li>1991-08-23</li>
-                          <li>미혼</li>
-                          <li>대한민국</li>
-                          <li><a href="mailto:KBK12131@sk.com" class="link">KBK12131@sk.com</a></li>
-                          <li>010-4526-5693</li>
+                          <li><b>생년월일</b><span>1983-09-23</span></li>
+                          <li><b>결혼유뮤</b><span>기혼</span></li>
+                          <li><b>국적</b><span>대한민국</span></li>
+                          <li><b>직원유형</b><span>정규직</span></li>
+                          <li><b>직책/직위</b><span>팀장/팀장</span></li>
+                          <li><b>직무</b><span>팀장/팀장</span></li>
                         </ul>
                       </div>
-                      <div class="tit"><b>현소속정보</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">회사명, 부서명, 직원유형, 직위/직책, 입사일, 그룹입사일, 발령일자 </span>
-                          </span>
-                        </span>
-                      </div>
+                    </dd>
+                  </dl>
+                  <dl data-open="group">
+                    <dt><span>조직</span><a href="javascript:void(0);"></a></dt>
+                    <dd>
+                      <div class="tit"><b>발령내역</b></div>
                       <div class="cont">
                         <ul class="list">
-                          <li>SK주식회사C&C</li>
-                          <li>Talent Management팀</li>
-                          <li>정규직</li>
-                          <li>Manager/팀원</li>
-                          <li>2020-01-02</li>
-                          <li>2020-01-02</li>
-                          <li>2020-01-02</li>
+                          <li><b>발령일자</b><span>1983-09-23</span></li>
+                          <li><b>발령구분</b><span>정기인사</span></li>
+                          <li><b>부서명</b><span>DT추진팀</span></li>
+                          <li><b>직책/직위</b><span>팀장/팀장</span></li>
+                          <li><b>근무지</b><span>서울</span></li>
                         </ul>
                       </div>
-                      <div class="tit"><b>주소</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">주민등록지, 실거주지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>입사 전 경력</b> </div>
                       <div class="cont">
                         <ul class="list">
-                          <li>경기도 파주시 인재동 102-3</li>
-                          <li>경기도 파주시 인재동 102-3</li>		
+                          <li><b>회사명</b><span>SK매직</span></li>
+                          <li><b>입사일자</b><span>1983-09-23</span></li>
+                          <li><b>퇴사일자</b><span>2023-09-23</span></li>
+                          <li><b>부서명</b><span>DT추진팀</span></li>
+                          <li><b>직책/직위</b><span>팀원/매니저</span></li>
                         </ul>
-                      </div>
-                      <div class="tit"><b>가족정보</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">가족관계,	이름,	성별,	생년월일</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>부</li>
-                              <li>김수철</li>
-                              <li>남</li>
-                              <li>1962-02-13</li>
-                            </ul>
-                          </li>
+                      </div>     
     
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>모</li>
-                              <li>김미진</li>
-                              <li>여</li>
-                              <li>2953-04-21</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
                     </dd>
                   </dl>
-                  <dl>
-                    <dt><span>조직</span><a href="javascript:void(0);"></a></dt>
-                    <dd>
-                      <div class="tit"><b>입사후 경력</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">발령일자,	발령구분,	부서명,	직책,	직위,	근무지</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2020-01-02</li>
-                              <li>신규입사</li>
-                              <li>Talent Management팀</li>
-                              <li>Manager</li>
-                              <li>팀원</li>
-                              <li>경기</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="tit"><b>입사 전 경력</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">회사명,	입사일자,	퇴사일자,	부서명,	직책,	직위,	근무지</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <div class="no-data">해당없음</div>
-                      </div>     
-                    </dd>
-                  </dl>
-                  <dl>
+                  <dl data-open="compensation">
                     <dt><span>보상</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>급여</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">연봉시작원 종료원 연봉금액(천원), 기준월, 수당금액(천원), 숫당명, 보너스 지급원, 보너스 금액(천원), 보너스 명, 일회성 보너스 지급원, 일회성 보너스 지급 금액(천원), 욀회성 보너스 명</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>급여내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>기준년도</b><span>2023</span></li>
+                          <li><b>총액</b><span class="align-r"><span class="acc-unit">KRW</span>100,000,000</span></li>
+                          <li><b>연봉</b><span class="align-r"><span class="acc-unit">KRW</span>80,000,000</span></li>
+                          <li><b>수당</b><span class="align-r"><span class="acc-unit">KRW</span>3,000,000</span></li>
+                          <li><b>성과급</b><span class="align-r">-</span></li>
+                          <li><b>일회성지급</b><span class="align-r"><span class="acc-unit">KRW</span>2,000,000</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="ability">
                     <dt><span>역량</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>학력사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	입학일자,	졸업일자,	학교명,	전공,	학위,	소재지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>학력사항</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>대학교</li>
-                              <li>2010-03-02</li>
-                              <li>2018-02-24</li>
-                              <li>고려대학교</li>
-                              <li>통계학</li>
-                              <li>학사</li>
-                              <li>서울</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>고등학교</li>
-                              <li>2007-03-02</li>
-                              <li>2010-02-12</li>
-                              <li>미정고등학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>중학교</li>
-                              <li>2004-03-02</li>
-                              <li>2007-02-15</li>
-                              <li>영채중학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>초등학교</li>
-                              <li>1998-03-02</li>
-                              <li>2004-02-21</li>
-                              <li>김정초등학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>학위</b><span>석사</span></li>
+                          <li><b>학교명</b><span>서울대학교</span></li>
+                          <li><b>전공</b><span>M&A</span></li>
+                          <li><b>졸업일자</b><span>2008-02-17</span></li>
                         </ul>
                       </div>
                 
-                      <div class="tit"><b>교육사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">교육기간, 구분, 교육명, 교육기관, 특이사항</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>외국어</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2014-07-21~2014-07-30</li>
-                              <li>이수</li>
-                              <li>Python 공급과정</li>
-                              <li>비트컴퓨터</li>
-                              <li>-</li>
-
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>언어</b><span>영어</span></li>
+                          <li><b>시험명</b><span>TOEIC</span></li>
+                          <li><b>등급</b><span>-</span></li>
+                          <li><b>점수</b><span>980</span></li>
+                          <li><b>취득일자</b><span>2008-02-17</span></li>
                         </ul>
                       </div>
               
-                      <div class="tit"><b>외국어</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	시험명,	점수                            </span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>자격사항</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                         
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>일본어</li>
-                              <li>JLPT</li>
-                              <li>N1</li>
-
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                 
-                      <div class="tit"><b>자격면허</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	발급처,	취득일자</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>운전면허 1종 보통</li>
-                              <li>서울경찰청</li>
-                              <li>2018-04-20</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>자격명</b><span>운전면허 1종 보통</span></li>
+                          <li><b>발급처</b><span>서울경찰청</span></li>
+                          <li><b>취득일자</b><span>-</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="result">
                     <dt><span>성과</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>평가</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">평가년도,	업적,	역량,	종합,	Comment</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>평가</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>2023</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>자신의 아이디어에 대한 특징이나 장점 기대효과를 명확히 설명명하고 이해시킴</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2022</li>
-                              <li>A</li>
-                              <li>S</li>
-                              <li>A</li>
-                              <li>고객이 확신을 갖고 동의할 수 있도록 구체적인 의사를 전달하고 목표를 다함</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2021</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>이견을 제시할 경우 의견을 받아들이되 여러가지 설득적인 논리를 찾아내어 제시</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2020</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>마케팅 전략 수립 시 각각의 제품 이미지에 맞는 차별화된 전략을 수립</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>기준년도</b><span>20023</span><span>20022</span><span>20021</span></li>
+                          <li><b>종합</b><span>S</span><span>A</span><span>A</span></li>
+                          <li><b>업적</b><span>S</span><span>B</span><span>A</span></li>
+                          <li><b>역량</b><span>S</span><span>A</span><span>B</span></li>
                         </ul>
                       </div>                  
-                      <div class="tit"><b>Project/Task</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">수행년도,	Project/Task,	수행 실적,	Comment</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>포상내역</b></div>
                       <div class="cont">
-                        <div class="no-data">해당없음</div>
+                        <ul class="list">
+                          <li><b>포상일자</b><span>2023-12-20</span></li>
+                          <li><b>포상명</b><span>격려금</span></li>
+                          <li><b>수여기관</b><span>SK네트웍스</span></li>
+                          <li><b>내/외부</b><span>내부</span></li>
+                        </ul>
                       </div>
-                      <div class="tit"><b>상벌사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">일자, 구분, 유형, 내용, 재정권자</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>징계내역</b></div>
                       <div class="cont">
-                        <div class="no-data">해당없음</div>
+                        <ul class="list">
+                          <li><b>징계시작</b><span>2023-12-20</span></li>
+                          <li><b>징계종료</b><span>2023-12-30</span></li>
+                          <li><b>징계구뷴</b><span>징계징계</span></li>
+                          <li><b>징계사유</b><span>징계를 받음</span></li>
+                        </ul>
                       </div>
                       
                     </dd>
@@ -3741,428 +2937,136 @@
               <div class="box">
                 <button class="btn-pin"></button>
                 <button class="btn-del"></button>
-                <div class="thumb"><img src="../images/temp-photo4.jpg" alt=""></div>
+                <div class="thumb-desc">
+                  <div class="thumb"><img src="../images/temp-photo4.jpg" alt=""></div>
+                  <div class="desc">
+                    <div class="basic"><b class="name">박대영</b><span class="info">(남, 만40세)</span></div>
+                    <div class="belong">SK네트웍스</div>
+                    <div class="team">DT추진팀/팀장</div>
+                  </div>
+                </div>
                 <div class="info-list">
-                  <dl>
+                  <dl data-open="person">
                     <dt><span>인사</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>인적사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">이름, 영문명, 한자명, 생년월일, 결혼유무, 국적, E-Mail, 이동전화 </span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>인적사항</b></div>
                       <div class="cont">
                         <ul class="list">
-                          <li>박대영</li>
-                          <li>Park daeyoung</li>
-                          <li>剝大永</li>
-                          <li>1987-03-02</li>
-                          <li>미혼</li>
-                          <li>대한민국</li>
-                          <li><a href="mailto:daeyoung1004@sk.com" class="link">daeyoung1004@sk.com</a></li>
-                          <li>010-4637-5680</li>
+                          <li><b>생년월일</b><span>1983-09-23</span></li>
+                          <li><b>결혼유뮤</b><span>기혼</span></li>
+                          <li><b>국적</b><span>대한민국</span></li>
+                          <li><b>직원유형</b><span>정규직</span></li>
+                          <li><b>직책/직위</b><span>팀장/팀장</span></li>
+                          <li><b>직무</b><span>팀장/팀장</span></li>
                         </ul>
-                      </div>
-                      <div class="tit"><b>현소속정보</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">회사명, 부서명, 직원유형, 직위/직책, 입사일, 그룹입사일, 발령일자 </span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="list">
-                          <li>SK에코플랜트</li>
-                          <li>정보기술팀</li>
-                          <li>정규직</li>
-                          <li>프로/LE/SI</li>
-                          <li>2018-05-10</li>
-                          <li>2018-05-10</li>
-                          <li>2018-05-10</li>
-                        </ul>
-                      </div>
-                      <div class="tit"><b>주소</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">주민등록지, 실거주지</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="list">
-                          <li>서울시 종로구 명륜동 23-41			  </li>
-                          <li>서울시 종로구 명륜동 23-41			  </li>
-                        </ul>
-                      </div>
-                      <div class="tit"><b>가족정보</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">가족관계,	이름,	성별,	생년월일</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <div class="no-data">해당없음</div>
                       </div>
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="group">
                     <dt><span>조직</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>입사후 경력</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">발령일자,	발령구분,	부서명,	직책,	직위,	근무지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>발령내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2018-05-10</li>
-                              <li>신규입사</li>
-                              <li>SK에코플랜트</li>
-                              <li>프로</li>
-                              <li>LE/SI</li>
-                              <li>서울</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>발령일자</b><span>1983-09-23</span></li>
+                          <li><b>발령구분</b><span>정기인사</span></li>
+                          <li><b>부서명</b><span>DT추진팀</span></li>
+                          <li><b>직책/직위</b><span>팀장/팀장</span></li>
+                          <li><b>근무지</b><span>서울</span></li>
                         </ul>
                       </div>
-                      <div class="tit"><b>입사 전 경력</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">회사명,	입사일자,	퇴사일자,	부서명,	직책,	직위,	근무지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>입사 전 경력</b> </div>
                       <div class="cont">
-                        <div class="no-data">해당없음</div>
+                        <ul class="list">
+                          <li><b>회사명</b><span>SK매직</span></li>
+                          <li><b>입사일자</b><span>1983-09-23</span></li>
+                          <li><b>퇴사일자</b><span>2023-09-23</span></li>
+                          <li><b>부서명</b><span>DT추진팀</span></li>
+                          <li><b>직책/직위</b><span>팀원/매니저</span></li>
+                        </ul>
                       </div>     
+    
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="compensation">
                     <dt><span>보상</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>급여</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">연봉시작원 종료원 연봉금액(천원), 기준월, 수당금액(천원), 숫당명, 보너스 지급원, 보너스 금액(천원), 보너스 명, 일회성 보너스 지급원, 일회성 보너스 지급 금액(천원), 욀회성 보너스 명</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>급여내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>기준년도</b><span>2023</span></li>
+                          <li><b>총액</b><span class="align-r"><span class="acc-unit">KRW</span>100,000,000</span></li>
+                          <li><b>연봉</b><span class="align-r"><span class="acc-unit">KRW</span>80,000,000</span></li>
+                          <li><b>수당</b><span class="align-r"><span class="acc-unit">KRW</span>3,000,000</span></li>
+                          <li><b>성과급</b><span class="align-r">-</span></li>
+                          <li><b>일회성지급</b><span class="align-r"><span class="acc-unit">KRW</span>2,000,000</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="ability">
                     <dt><span>역량</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>학력사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	입학일자,	졸업일자,	학교명,	전공,	학위,	소재지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>학력사항</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>대학교</li>
-                              <li>2006-03-02</li>
-                              <li>2013-02-24</li>
-                              <li>서강대학교</li>
-                              <li>물류시스템공학</li>
-                              <li>학사</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>고등학교</li>
-                              <li>2003-03-02</li>
-                              <li>2006-02-12</li>
-                              <li>예제고등학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>중학교</li>
-                              <li>2000-03-02</li>
-                              <li>2003-02-15</li>
-                              <li>배후중학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>초등학교</li>
-                              <li>1994-03-02</li>
-                              <li>2000-02-21</li>
-                              <li>신진초등학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>학위</b><span>석사</span></li>
+                          <li><b>학교명</b><span>서울대학교</span></li>
+                          <li><b>전공</b><span>M&A</span></li>
+                          <li><b>졸업일자</b><span>2008-02-17</span></li>
                         </ul>
                       </div>
                 
-                      <div class="tit"><b>교육사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">교육기간, 구분, 교육명, 교육기관, 특이사항</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>외국어</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2014-07-21~2014-07-30</li>
-                              <li>이수</li>
-                              <li>Android 완전정복</li>
-                              <li>패스트캠퍼스</li>
-                              <li>-</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>언어</b><span>영어</span></li>
+                          <li><b>시험명</b><span>TOEIC</span></li>
+                          <li><b>등급</b><span>-</span></li>
+                          <li><b>점수</b><span>980</span></li>
+                          <li><b>취득일자</b><span>2008-02-17</span></li>
                         </ul>
                       </div>
               
-                      <div class="tit"><b>외국어</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">시험일자, 외국어유형, 시험명, 점수/등급, 시험기관명</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>자격사항</b></div>
                       <div class="cont">
-                        <div class="no-data">해당없읍</div>
-                      </div>
-                 
-                      <div class="tit"><b>자격면허</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	발급처,	취득일자</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>운전면허 1종 보통</li>
-                              <li>서울경찰청</li>
-                              <li>2019-01-01</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>자격명</b><span>운전면허 1종 보통</span></li>
+                          <li><b>발급처</b><span>서울경찰청</span></li>
+                          <li><b>취득일자</b><span>-</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="result">
                     <dt><span>성과</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>평가</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">평가년도,	업적,	역량,	종합,	Comment</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>평가</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">6.</span>
-                            <ul class="list">
-                              <li>2023</li>
-                              <li>B</li>
-                              <li>B</li>
-                              <li>B</li>
-                              <li>자신의 아이디어에 대한 특징이나 장점 기대효과를 명확히 설명명하고 이해시킴</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">5.</span>
-                            <ul class="list">
-                              <li>2022</li>
-                              <li>S</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>고객이 확신을 갖고 동의할 수 있도록 구체적인 의사를 전달하고 목표를 다함</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>2021</li>
-                              <li>B</li>
-                              <li>B</li>
-                              <li>C</li>
-                              <li>이견을 제시할 경우 의견을 받아들이되 여러가지 설득적인 논리를 찾아내어 제시</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2020</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>마케팅 전략 수립 시 각각의 제품 이미지에 맞는 차별화된 전략을 수립</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2019</li>
-                              <li>S</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>추진력으로 노력함</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2018</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>대범함과 노력으로 타의 모범이 됨</li>
-
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>기준년도</b><span>20023</span><span>20022</span><span>20021</span></li>
+                          <li><b>종합</b><span>S</span><span>A</span><span>A</span></li>
+                          <li><b>업적</b><span>S</span><span>B</span><span>A</span></li>
+                          <li><b>역량</b><span>S</span><span>A</span><span>B</span></li>
                         </ul>
                       </div>                  
-                      <div class="tit"><b>Project/Task</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">수행년도,	Project/Task,	수행 실적,	Comment</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>포상내역</b></div>
                       <div class="cont">
-                        <div class="no-data">해당없음</div>
+                        <ul class="list">
+                          <li><b>포상일자</b><span>2023-12-20</span></li>
+                          <li><b>포상명</b><span>격려금</span></li>
+                          <li><b>수여기관</b><span>SK네트웍스</span></li>
+                          <li><b>내/외부</b><span>내부</span></li>
+                        </ul>
                       </div>
-                      <div class="tit"><b>상벌사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">일자, 구분, 유형, 내용, 재정권자</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>징계내역</b></div>
                       <div class="cont">
-                        <div class="no-data">해당없음</div>
+                        <ul class="list">
+                          <li><b>징계시작</b><span>2023-12-20</span></li>
+                          <li><b>징계종료</b><span>2023-12-30</span></li>
+                          <li><b>징계구뷴</b><span>징계징계</span></li>
+                          <li><b>징계사유</b><span>징계를 받음</span></li>
+                        </ul>
                       </div>
                       
                     </dd>
@@ -4172,428 +3076,136 @@
               <div class="box">
                 <button class="btn-pin"></button>
                 <button class="btn-del"></button>
-                <div class="thumb"><img src="../images/temp-photo8.jpg" alt=""></div>
+                <div class="thumb-desc">
+                  <div class="thumb"><img src="../images/temp-photo8.jpg" alt=""></div>
+                  <div class="desc">
+                    <div class="basic"><b class="name">김병용</b><span class="info">(남, 만40세)</span></div>
+                    <div class="belong">SK네트웍스</div>
+                    <div class="team">DT추진팀/팀장</div>
+                  </div>
+                </div>
                 <div class="info-list">
-                  <dl>
+                  <dl data-open="person">
                     <dt><span>인사</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>인적사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">이름, 영문명, 한자명, 생년월일, 결혼유무, 국적, E-Mail, 이동전화 </span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>인적사항</b></div>
                       <div class="cont">
                         <ul class="list">
-                          <li>박대영</li>
-                          <li>Park daeyoung</li>
-                          <li>剝大永</li>
-                          <li>1987-03-02</li>
-                          <li>미혼</li>
-                          <li>대한민국</li>
-                          <li><a href="mailto:daeyoung1004@sk.com" class="link">daeyoung1004@sk.com</a></li>
-                          <li>010-4637-5680</li>
+                          <li><b>생년월일</b><span>1983-09-23</span></li>
+                          <li><b>결혼유뮤</b><span>기혼</span></li>
+                          <li><b>국적</b><span>대한민국</span></li>
+                          <li><b>직원유형</b><span>정규직</span></li>
+                          <li><b>직책/직위</b><span>팀장/팀장</span></li>
+                          <li><b>직무</b><span>팀장/팀장</span></li>
                         </ul>
-                      </div>
-                      <div class="tit"><b>현소속정보</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">회사명, 부서명, 직원유형, 직위/직책, 입사일, 그룹입사일, 발령일자 </span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="list">
-                          <li>SK에코플랜트</li>
-                          <li>정보기술팀</li>
-                          <li>정규직</li>
-                          <li>프로/LE/SI</li>
-                          <li>2018-05-10</li>
-                          <li>2018-05-10</li>
-                          <li>2018-05-10</li>
-                        </ul>
-                      </div>
-                      <div class="tit"><b>주소</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">주민등록지, 실거주지</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="list">
-                          <li>서울시 종로구 명륜동 23-41			  </li>
-                          <li>서울시 종로구 명륜동 23-41			  </li>
-                        </ul>
-                      </div>
-                      <div class="tit"><b>가족정보</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">가족관계,	이름,	성별,	생년월일</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <div class="no-data">해당없음</div>
                       </div>
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="group">
                     <dt><span>조직</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>입사후 경력</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">발령일자,	발령구분,	부서명,	직책,	직위,	근무지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>발령내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2018-05-10</li>
-                              <li>신규입사</li>
-                              <li>SK에코플랜트</li>
-                              <li>프로</li>
-                              <li>LE/SI</li>
-                              <li>서울</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>발령일자</b><span>1983-09-23</span></li>
+                          <li><b>발령구분</b><span>정기인사</span></li>
+                          <li><b>부서명</b><span>DT추진팀</span></li>
+                          <li><b>직책/직위</b><span>팀장/팀장</span></li>
+                          <li><b>근무지</b><span>서울</span></li>
                         </ul>
                       </div>
-                      <div class="tit"><b>입사 전 경력</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">회사명,	입사일자,	퇴사일자,	부서명,	직책,	직위,	근무지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>입사 전 경력</b> </div>
                       <div class="cont">
-                        <div class="no-data">해당없음</div>
+                        <ul class="list">
+                          <li><b>회사명</b><span>SK매직</span></li>
+                          <li><b>입사일자</b><span>1983-09-23</span></li>
+                          <li><b>퇴사일자</b><span>2023-09-23</span></li>
+                          <li><b>부서명</b><span>DT추진팀</span></li>
+                          <li><b>직책/직위</b><span>팀원/매니저</span></li>
+                        </ul>
                       </div>     
+    
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="compensation">
                     <dt><span>보상</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>급여</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">연봉시작원 종료원 연봉금액(천원), 기준월, 수당금액(천원), 숫당명, 보너스 지급원, 보너스 금액(천원), 보너스 명, 일회성 보너스 지급원, 일회성 보너스 지급 금액(천원), 욀회성 보너스 명</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>급여내역</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2020-04-01</li>
-                              <li>2020-12-31</li>
-                              <li>87,000</li>
-                              <li>2020-04</li>
-                              <li>1,000</li>
-                              <li>기본추가 수당</li>
-                              <li>2020-04</li>
-                              <li>2,000</li>
-                              <li>경직보너스</li>
-                              <li>2020-04</li>
-                              <li>500</li>
-                              <li>이달의 SUPEX</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>기준년도</b><span>2023</span></li>
+                          <li><b>총액</b><span class="align-r"><span class="acc-unit">KRW</span>100,000,000</span></li>
+                          <li><b>연봉</b><span class="align-r"><span class="acc-unit">KRW</span>80,000,000</span></li>
+                          <li><b>수당</b><span class="align-r"><span class="acc-unit">KRW</span>3,000,000</span></li>
+                          <li><b>성과급</b><span class="align-r">-</span></li>
+                          <li><b>일회성지급</b><span class="align-r"><span class="acc-unit">KRW</span>2,000,000</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="ability">
                     <dt><span>역량</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>학력사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	입학일자,	졸업일자,	학교명,	전공,	학위,	소재지</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>학력사항</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>대학교</li>
-                              <li>2006-03-02</li>
-                              <li>2013-02-24</li>
-                              <li>서강대학교</li>
-                              <li>물류시스템공학</li>
-                              <li>학사</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>고등학교</li>
-                              <li>2003-03-02</li>
-                              <li>2006-02-12</li>
-                              <li>예제고등학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>중학교</li>
-                              <li>2000-03-02</li>
-                              <li>2003-02-15</li>
-                              <li>배후중학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>초등학교</li>
-                              <li>1994-03-02</li>
-                              <li>2000-02-21</li>
-                              <li>신진초등학교</li>
-                              <li>-</li>
-                              <li>졸업</li>
-                              <li>서울</li>
-
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>학위</b><span>석사</span></li>
+                          <li><b>학교명</b><span>서울대학교</span></li>
+                          <li><b>전공</b><span>M&A</span></li>
+                          <li><b>졸업일자</b><span>2008-02-17</span></li>
                         </ul>
                       </div>
                 
-                      <div class="tit"><b>교육사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">교육기간, 구분, 교육명, 교육기관, 특이사항</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>외국어</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2014-07-21~2014-07-30</li>
-                              <li>이수</li>
-                              <li>Android 완전정복</li>
-                              <li>패스트캠퍼스</li>
-                              <li>-</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>언어</b><span>영어</span></li>
+                          <li><b>시험명</b><span>TOEIC</span></li>
+                          <li><b>등급</b><span>-</span></li>
+                          <li><b>점수</b><span>980</span></li>
+                          <li><b>취득일자</b><span>2008-02-17</span></li>
                         </ul>
                       </div>
               
-                      <div class="tit"><b>외국어</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">시험일자, 외국어유형, 시험명, 점수/등급, 시험기관명</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>자격사항</b></div>
                       <div class="cont">
-                        <div class="no-data">해당없읍</div>
-                      </div>
-                 
-                      <div class="tit"><b>자격면허</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">구분,	발급처,	취득일자</span>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>운전면허 1종 보통</li>
-                              <li>서울경찰청</li>
-                              <li>2019-01-01</li>
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>자격명</b><span>운전면허 1종 보통</span></li>
+                          <li><b>발급처</b><span>서울경찰청</span></li>
+                          <li><b>취득일자</b><span>-</span></li>
                         </ul>
                       </div>
                     </dd>
                   </dl>
-                  <dl>
+                  <dl data-open="result">
                     <dt><span>성과</span><a href="javascript:void(0);"></a></dt>
                     <dd>
-                      <div class="tit"><b>평가</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">평가년도,	업적,	역량,	종합,	Comment</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>평가</b></div>
                       <div class="cont">
-                        <ul class="num-list">
-                          <li>
-                            <span class="num">6.</span>
-                            <ul class="list">
-                              <li>2023</li>
-                              <li>B</li>
-                              <li>B</li>
-                              <li>B</li>
-                              <li>자신의 아이디어에 대한 특징이나 장점 기대효과를 명확히 설명명하고 이해시킴</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">5.</span>
-                            <ul class="list">
-                              <li>2022</li>
-                              <li>S</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>고객이 확신을 갖고 동의할 수 있도록 구체적인 의사를 전달하고 목표를 다함</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">4.</span>
-                            <ul class="list">
-                              <li>2021</li>
-                              <li>B</li>
-                              <li>B</li>
-                              <li>C</li>
-                              <li>이견을 제시할 경우 의견을 받아들이되 여러가지 설득적인 논리를 찾아내어 제시</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">3.</span>
-                            <ul class="list">
-                              <li>2020</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>마케팅 전략 수립 시 각각의 제품 이미지에 맞는 차별화된 전략을 수립</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">2.</span>
-                            <ul class="list">
-                              <li>2019</li>
-                              <li>S</li>
-                              <li>A</li>
-                              <li>A</li>
-                              <li>추진력으로 노력함</li>
-
-                            </ul>
-                          </li>
-                          <li>
-                            <span class="num">1.</span>
-                            <ul class="list">
-                              <li>2018</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>S</li>
-                              <li>대범함과 노력으로 타의 모범이 됨</li>
-
-                            </ul>
-                          </li>
+                        <ul class="list">
+                          <li><b>기준년도</b><span>20023</span><span>20022</span><span>20021</span></li>
+                          <li><b>종합</b><span>S</span><span>A</span><span>A</span></li>
+                          <li><b>업적</b><span>S</span><span>B</span><span>A</span></li>
+                          <li><b>역량</b><span>S</span><span>A</span><span>B</span></li>
                         </ul>
                       </div>                  
-                      <div class="tit"><b>Project/Task</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">수행년도,	Project/Task,	수행 실적,	Comment</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>포상내역</b></div>
                       <div class="cont">
-                        <div class="no-data">해당없음</div>
+                        <ul class="list">
+                          <li><b>포상일자</b><span>2023-12-20</span></li>
+                          <li><b>포상명</b><span>격려금</span></li>
+                          <li><b>수여기관</b><span>SK네트웍스</span></li>
+                          <li><b>내/외부</b><span>내부</span></li>
+                        </ul>
                       </div>
-                      <div class="tit"><b>상벌사항</b>
-                        <span class="tooltip-wrap type2 floating">
-                          <i class="ico-noti"></i>
-                          <span class="tooltip-layer">
-                            <span class="tooltip-txt">일자, 구분, 유형, 내용, 재정권자</span>
-                          </span>
-                        </span>
-                      </div>
+                      <div class="tit"><b>징계내역</b></div>
                       <div class="cont">
-                        <div class="no-data">해당없음</div>
+                        <ul class="list">
+                          <li><b>징계시작</b><span>2023-12-20</span></li>
+                          <li><b>징계종료</b><span>2023-12-30</span></li>
+                          <li><b>징계구뷴</b><span>징계징계</span></li>
+                          <li><b>징계사유</b><span>징계를 받음</span></li>
+                        </ul>
                       </div>
                       
                     </dd>
@@ -4777,11 +3389,33 @@ function listToggleBtn(){
 
     }); //$(document).ready
 
+
+    $('.tab-type1 button').on('click', function(){
+    $('.tab-type1 button').removeClass('on');
+    $(this).addClass('on');
+  });
+
+  //검색고정
+  $(window).on('scroll', function(){
+    let st = $(window).scrollTop();
+      let top = 65// +  $('.employee-search-wrap').height();
+      if(st >= top){
+        $('.header').addClass('for-search-fixed');
+        $('.employee-search-wrap').addClass('fixed');
+      }else{
+        $('.header').removeClass('for-search-fixed');
+        $('.employee-search-wrap').removeClass('fixed');
+      }
+    
+
+  });
+
+  function employeeSearchCallback(){
+
     //인재검색
     $('.compare-list .box .info-list dl dt a').on('click', function(){
       let $pannel = $(this).parents('dt').next();
       let $siblings = $(this).parents('dl').siblings('dl').find('dd');
-      $siblings.slideUp();
       if($pannel.is(':hidden') ){
         $(this).addClass('on');
         $pannel.slideDown()
@@ -4805,25 +3439,31 @@ function listToggleBtn(){
     });
 
 
-    $('.tab-type1 button').on('click', function(){
-    $('.tab-type1 button').removeClass('on');
-    $(this).addClass('on');
-  });
-
-  //검색고정
-  $(window).on('scroll', function(){
-    let st = $(window).scrollTop();
-      let top = 65// +  $('.employee-search-wrap').height();
-      if(st >= top){
-        $('.header').addClass('for-search-fixed');
-        $('.employee-search-wrap').addClass('fixed');
+    $('[data-btn-open]').on('click', function(){
+      let name = $(this).data('btn-open');
+      let $wrapper = $('[data-open='+name+']').parents('.info-list');      
+      $wrapper.scrollTop(0);
+      if(name == 'total'){
+        $('[data-open] dt a').addClass('on');
+        $('[data-open] dd').show();
+        setTimeout(() => {
+          $('.compare-list .info-list').scrollTop(0);
+        }, 100);
       }else{
-        $('.header').removeClass('for-search-fixed');
-        $('.employee-search-wrap').removeClass('fixed');
-      }
-    
+        
+        $('[data-open] dt a').removeClass('on');
+        $('[data-open] dd').hide();
 
-  });
+        $('[data-open='+name+'] dt a').addClass('on');
+        $('[data-open='+name+'] dd').show();
+        
+        setTimeout(() => {
+          let top = $('[data-open='+name+']').position().top;          
+          $wrapper.animate({scrollTop:top}, 200)
+        }, 300);
+      }
+    });
+  }
 
 
     //자동완성
