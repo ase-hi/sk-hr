@@ -224,7 +224,7 @@ input[type="password"]:disabled{background-color:#f2f2f2 !important;opacity: 1; 
 .title-wrap .right .search-menu > * ~ *{margin-left:5px;}
 .title-wrap .vt{align-items: flex-start;}
 .title-wrap .btn-more{ color:#777;font-size:14px;}
-.title-wrap.title-search{align-items: flex-start;}
+.title-wrap.title-search{align-items: flex-start;flex-wrap:wrap;}
 [class*=title-] em{vertical-align:baseline; color:#3441D5;}
 [class*=title-primary] { font-size: 26px; font-weight: 500; color: #101828;}
 [class*=title-primary] .sub-txt{ color:#666;font-size:20px;}
