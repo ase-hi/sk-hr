@@ -116,6 +116,18 @@
 				this.setEvents();
 				$(this.selector).hide();
             }
+
+					if(this.selector.hasAttribute('openFix')){
+							var _self = this;
+							var $labelBtn = $(this.selectors.labelArea);
+							function initOpen(){
+								$this = $labelBtn.parent().find(_self.classes.listArea);
+								$(_self.classes.listArea).not($this).hide();
+								$this.show();
+								// $this.toggle();
+							}
+							setTimeout(initOpen);
+						}
         },
 
         extractData : function() {
@@ -211,6 +223,7 @@
 			var _self = this;
 			$(this.selectors.labelArea).attr('style', $(this.selector).attr('style')).addClass($(this.selector).attr('class'));
 			$(this.selectors.labelArea).click(function(e){
+				if(_self.selector.hasAttribute('openFix')) return;
 				e.stopPropagation();
 				$this = $(this).parent().find(_self.classes.listArea);
 				$(_self.classes.listArea).not($this).hide();
@@ -221,7 +234,7 @@
 				var isItem    = $(e.target).hasClass(_self.classes.listItem.substring(1));
 				var isClear   = $(e.target).hasClass(_self.classes.clear.substring(1));
 				var isSearch  = $(e.target).hasClass(_self.classes.search.substring(1));
-				if(!isGroup && !isItem && !isClear && !isSearch) {
+				if(!_self.selector.hasAttribute('openFix') && !isGroup && !isItem && !isClear && !isSearch) {
 					$(_self.selectors.listArea).hide();
 				}
 			});
