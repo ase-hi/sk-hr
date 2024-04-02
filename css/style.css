@@ -89,6 +89,9 @@ body.bg-gray{background:#F2F4F6;}
 .search-filter-wrap .filter-box .box-body{display:none;margin-top:8px;}
 .search-filter-wrap .filter-box .box-body .f-wrap{position:relative;}
 .search-filter-wrap .filter-box .box-body .f-wrap ~ .f-wrap{margin-top:8px;}
+.search-filter-wrap .filter-box .box-body .inp-range{display:flex;align-items:center;}
+.search-filter-wrap .filter-box .box-body .inp-range input{height:30px;flex:1;min-width: 0;font-size:13px; color:#667085;text-align:center;padding:0 5px;}
+.search-filter-wrap .filter-box .box-body .inp-range .dash{margin:0 8px;}
 .search-filter-wrap .chk-list li ~ li{margin-top:10px;}
 .search-filter-wrap .chk-list li.line{margin-top:10px;padding-top:10px;border-top:1px solid #ddd;}
 .search-filter-wrap .chk-list .inp-check input:checked ~ .t{ color:#151A59;}
@@ -462,6 +465,7 @@ body.bg-gray{background:#F2F4F6;}
 .compare-list .info-list .cont .list-tb table{border-radius:5px;width:100%;}
 .compare-list .info-list .cont .list-tb th{font-weight:500;font-size:13px;border-bottom:1px solid #ddd;padding:5px 10px; color:#000;word-break: keep-all;}
 .compare-list .info-list .cont .list-tb td{padding:5px 10px;font-size:13px;text-align:center;word-break: keep-all;}
+.compare-list .info-list .cont .list-tb td.bg{background: #F3F3F3;}
 .compare-list .info-list .cont .list-tb .link{border-bottom:1px solid #ccc;cursor: pointer;}
 .compare-list .info-list .cont .list-tb .comment-list li{display:flex;}
 .compare-list .info-list .cont .list-tb .comment-list li ~ li{margin-top:5px;}
@@ -469,7 +473,8 @@ body.bg-gray{background:#F2F4F6;}
 .compare-list .info-list .cont .list-tb .comment-list li .comm{fleX:1;overflow:hidden;word-break: keep-all;padding-top:3px;padding-left:10px;}
 .compare-list .info-list .cont .list-tb.st2 th,
 .compare-list .info-list .cont .list-tb.st2 td{padding:5px 5px;font-size:12px;}
-.compare-list .info-list .cont .text-area{font-size:13px;line-height:1.5;}
+.compare-list .info-list .cont .text-area{font-size:13px;line-height:1.5;padding-top:5px;}
+.compare-list .info-list .tit + .cont .text-area{border-top: 1px solid #222;}
 .compare-list .info-list .cont .num-list > li{display:flex;}
 .compare-list .info-list .cont .num-list > li ~ li{margin-top:10px;}
 .compare-list .info-list .cont .num-list > li > .num{margin-right:10px;font-size:14px;}
@@ -632,6 +637,7 @@ body .wrapper .data-top + *{margin-top:20px;}
 .btn-employee-compare [class*=ico]{margin-top:7px;min-height: 20px;}
 
 .default-box-wrap{display:flex;}
+.default-box-wrap .data-box{width:100%;}
 .default-box-wrap .auto{flex:1;overflow:hidden;}
 .default-box-wrap > * ~ *{margin-left:30px;}
 .default-box-wrap .data-top{margin-top:0;}
@@ -645,9 +651,15 @@ body .wrapper .data-top + *{margin-top:20px;}
 .default-box-wrap .permission-select .amsify-selection-list{width:100% !important;}
 
 .default-list > ul > li{width:100%;}
+.default-list[class*=list] ul{padding-left:25px;margin:15px 0 15px;}
+.default-list[class*=list].check-list > li{display:block;}
 .default-list.list2{display:grid;grid-template-columns: repeat(2, 1fr);gap:10px;}
-.default-list.list2 li ~ li{margin-top:0px;}
-.default-list li{display:flex;min-height:24px;flex-wrap: wrap;}
+.default-list.list2 > li ~ li{margin-top:0px;}
+.default-list.list3{display:grid;grid-template-columns: repeat(3, 1fr);gap:10px;}
+.default-list.list3 > li ~ li{margin-top:0px;}
+.default-list.list4{display:grid;grid-template-columns: repeat(4, 1fr);gap:10px;}
+.default-list.list4 > li ~ li{margin-top:0;}
+.default-list li{display:flex;min-height:24px;flex-wrap: wrap;align-items: flex-start;}
 .default-list li .right{margin-left:auto;}
 .default-list li .right .btn-tog{position:relative;top:0;}
 .default-list li ul{width:100%;}

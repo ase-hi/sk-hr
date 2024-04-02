@@ -194,6 +194,47 @@
 		});			
   }
 		
+	function allChk(allcheck){
+		$(allcheck).each(function(){
+			var name = $(this).attr('name');
+			var _this = $(this);
+			_this.on('change', function(){
+				if($(this).prop("checked")){
+					$('[name='+name+']').prop("checked", true);
+				}else{
+					$('[name='+name+']').prop("checked", false);
+				}
+			});
+			$('[name='+name+']').on('change', function(){
+				var total= $('[name='+name+']').not(_this).length;
+				var chked= $('[name='+name+']:checked').not(_this).length;
+
+				if(chked == total){
+					 _this.prop("checked", true);
+				}else{
+					_this.prop("checked", false);
+				}
+			});
+		});
+	}
+	
+
+	function commaInput(inputs){
+		const numericInputs = document.querySelectorAll(inputs);
+
+		numericInputs.forEach(function(input) {
+				input.addEventListener('input', function(event) {
+						let value = event.target.value;
+						value = value.replace(/\D/g, '');
+						value = addCommas(value);
+						event.target.value = value;
+				});
+		});
+
+		function addCommas(value) {
+				return value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		}
+	}
 	
 
 	$(function(){
