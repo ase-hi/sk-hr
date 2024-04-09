@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script type="text/javascript" src="../js/ui.js"></script>
+<script type="text/javascript" src="../js/ui-pub.js"></script>
+<!-- 그리드 -->
+<link type="text/css" rel="stylesheet" href="../js/kendo-2024.1.130/kendo.common.min.css" />
+<script type="text/javascript" src="../js/kendo-2024.1.130/kendo.all.min.js"></script>
+<!-- 슬라이드 -->
+<link rel="stylesheet" href="../js/swiper/swiper-bundle.min.css">
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<!-- 필터셀렉트 -->
+<link type="text/css" rel="stylesheet" href="../js/amsify.select/amsify.select.css" />
+<script type="text/javascript" src="../js/amsify.select/jquery.amsifyselect.js"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- header -->
+  <div class="header">
+    <div class="wrap-inner">
+      <h1 class="logo-title">
+        <div class="logo"></div>
+      </h1>
+      <div class="right">
+        <div class="user-menu">
+          <div class="layer-wrap">
+            <button class="btn-menu"><i class="ico-menu"></i></button>
+            <div class="menu-layer">
+              <ul>
+                <li><a href="javascript:void(0);">전체검색</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+                <li><a href="javascript:void(0);">Data Map</a></li>
+                <li><a href="javascript:void(0);">인재함</a></li>
+                <li><a href="javascript:void(0);">시스템관리</a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn">MY HR</button>
+          <div class="user-thumb layer-wrap">
+            <a href="javascript:void(0);" class="thumb"></a>
+            <div class="menu-layer">
+              <button type="button" class="close"></button>
+              <div class="user-info">
+                <div class="thumb"></div>
+                <div class="info">
+                  <span>전략기획실</span>
+                  <span>현기획</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // header -->
+    <!-- lnb-menu-wrap -->
+    <div class="lnb-menu-wrap">
+      
+      <!-- lnb-menu -->
+      <div class="lnb-menu">
+          <h2 class="lnb-title">시스템 관리</h2>
+          <ul class="lnb">
+              <li><a href="javascript:void(0);"><span class="txt">전체검색</span></a></li>
+              <li><a href="javascript:void(0);"><span class="txt">공지사항</span></a></li>
+              <li class="has-menu open"><a href="javascript:void(0);"><span class="txt">Data Map</span></a>
+                <ul>
+                  <li><a href="javascript:void(0);">Data Map Service</a></li>
+                  <li><a href="javascript:void(0);">코드 품질 관리</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript:void(0);"><span class="txt">인재함</span></a></li>
+              <li class="has-menu open on"><a href="javascript:void(0);"><span class="txt">시스템관리</span></a>
+                <ul>
+                  <li><a href="javascript:void(0);">사용자 권한 설정</a></li>
+                  <li class="on"><a href="javascript:void(0);">사용자 권한 요청 현황</a></li>
+                  <li><a href="javascript:void(0);">사용자 공통 코드 관리</a></li>
+                </ul>
+              </li>
+          </ul>
+      </div>
+      <!-- // lnb-menu -->
+    </div>
+    <!-- // lnb-menu-wrap -->
+  <!-- container -->
+  <div class="container">
+      <!-- content -->
+      <div class="content">
+        <div class="title-wrap">
+          <h2 class="title-primary">사용자 권한 요청 현황</h2>
+          <div class="right">
+            <ol class="path">
+              <li><a href="/"><i class="ico-home"></i></a></li>
+              <li><span>시스템 관리</span></li>
+              <li><span>사용자 권한 요청 현황</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="data-type4">
+          <div id="grid"></div>
+        </div>
+        
+      </div>
+      <!-- // content -->
+  </div>
+  <!-- // container -->
+
+</div>
+<!-- // wrapper -->
+
+<button type="button" class="btn-employee-compare"><span class="txt">인재<br>비교</span><i class="ico-employee-compare"></i></button>
+
+
+<div class="layerpopup" id="pop-agree">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup" style="width:400px;">
+      <a href="javascript:void(0);" class="close type2" onclick="popClose('#pop-agree');"></a>
+      <div class="pop-header">
+        <strong class="pop-tit">개인정보 보호 동의</strong>
+      </div>
+      <div class="pop-body">
+        <div class="using-agree">
+          <div class="input input-textarea" style="height:200px">
+            <textarea placeholder="사유를 입력해주세요." onkeyup="this.value ? $('#download').removeAttr('disabled') : $('#download').attr('disabled', 'disabled')"></textarea>
+          </div>
+        </div>
+        
+        <div class="btn-wrap">
+          <button type="button" class="btn-type1 st2" onclick="popClose('#pop-agree');">취소</button>
+          <button type="button" class="btn-type1 st1" id="download" disabled onclick="popClose('#pop-agree');">다운로드</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  kendo.pdf.defineFont({
+			"NotoSans": "../font/NotoSansKR-Regular.ttf",
+      "NotoSans|Bold" : "../font/NotoSansKR-Bold.ttf"
+  });
+function getPdf() {
+			kendo.drawing.drawDOM($("#grid"))
+				.then(function (group) {
+					// Render the result as a PDF file
+					return kendo.drawing.exportPDF(group, {
+						paperSize: "auto",
+						margin: { left: "1cm", top: "1cm", right: "1cm", bottom: "1cm" }
+					});
+				})
+				.done(function (data) {
+					// Save the PDF file
+					kendo.saveAs({
+						dataURI: data,
+						fileName: "test.pdf"
+					});
+                });
+        }
+  $(document).ready(function () {
+      var dataSource = new kendo.data.DataSource({
+            data: [
+              { "번호": '15', "신청일": "1991-01-02", "이름": '홍길동', "사번": '',  "성별": "남", "나이": "54",  "소속": "SK이노베이션", "부서": "기획", "직위": "이사", "직책": "본부장", "사내번호": "02-1234-5678", "이동전화": "010-1234-5678", "계정 생성/삭제": "", "관리자 등록/삭제": ""},
+              { "번호": '15', "신청일": "1991-01-02", "이름": '홍길동', "사번": '',  "성별": "남", "나이": "54",  "소속": "SK이노베이션", "부서": "기획", "직위": "이사", "직책": "본부장", "사내번호": "02-1234-5678", "이동전화": "010-1234-5678", "계정 생성/삭제": "", "관리자 등록/삭제": ""},
+              { "번호": '15', "신청일": "1991-01-02", "이름": '홍길동', "사번": '',  "성별": "남", "나이": "54",  "소속": "SK이노베이션", "부서": "기획", "직위": "이사", "직책": "본부장", "사내번호": "02-1234-5678", "이동전화": "010-1234-5678", "계정 생성/삭제": "", "관리자 등록/삭제": ""},
+              { "번호": '15', "신청일": "1991-01-02", "이름": '홍길동', "사번": '',  "성별": "남", "나이": "54",  "소속": "SK이노베이션", "부서": "기획", "직위": "이사", "직책": "본부장", "사내번호": "02-1234-5678", "이동전화": "010-1234-5678", "계정 생성/삭제": "", "관리자 등록/삭제": ""},
+              { "번호": '15', "신청일": "1991-01-02", "이름": '홍길동', "사번": '',  "성별": "남", "나이": "54",  "소속": "SK이노베이션", "부서": "기획", "직위": "이사", "직책": "본부장", "사내번호": "02-1234-5678", "이동전화": "010-1234-5678", "계정 생성/삭제": "", "관리자 등록/삭제": ""},
+              // More data...
+            ],
+            schema: {
+              model: {
+                fields: {
+                  ID: { type: "number" },
+                  Name: { type: "string" },
+                  Age: { type: "number" }
+                }
+              }
+            },
+            pageSize: 15,
+          });
+
+    var grid = $("#grid").kendoGrid({
+          dataSource: dataSource,
+          toolbar: ["pdf"],
+                pdf: {
+                    allPages: true,
+                    avoidLinks: true,
+                    paperSize: "A4",
+                    margin: { top: "2cm", left: "1cm", right: "1cm", bottom: "1cm" },
+                    landscape: true,
+                    repeatHeaders: true,
+                    template: $("#page-template").html(),
+                    scale: 0.8
+                },
+            // height: 550,
+            // toolbar: ["excel"],
+            toolbar: function () {
+                return '<div class="data-top">'+
+                  '<span class="total">전체(총 <b>15</b> 건)</span>'+
+                  '<div class="right">'+
+                   ' <select> <option value="">이름 오름차순</option> <option value="">성별 오름차순</option> </select>'+
+                  ' <select id="pageSizeSelector"><option value="30">30 개보기</option> <option value="50">50 개보기</option> <option value="100">100 개보기</option></select>'+
+                  ' <button type="button" id="exportBtn" class="btn-type2 st10" onclick="getPdf();"><i class="ico-pdf"></i>PDF다운로드</button>'+
+                  '</div></div>';
+            },
+            // groupable: true,
+            sortable: true,
+            pageable: true,
+             columns: [
+              { field: "번호", width:"80px"},
+              { field: "신청일", width:"110px"},
+              { field: "이름", width:"100px"},
+              { field: "사번", width:"110px"},
+              { field: "성별", width:"60px" },
+              { field: "나이", width:"60px" },
+              { field: "소속", width:"200px" },
+              { field: "부서", width:"100px" },
+              { field: "직위", width:"80px" },
+              { field: "직책", width:"80px" },
+              { field: "사내번호", width:"120px" },
+              { field: "이동전화", width:"120px" },
+              { field: "계정 생성/삭제", width:"130px", template:'<button type="button" class="btn-type3 st10">생성</button><button type="button" class="btn-type3 st2">삭제</button>' },
+              { field: "관리자 등록/삭제", width:"130px", template:'<button type="button" class="btn-type3 st1">등록</button><button type="button" class="btn-type3 st2">삭제</button>' },
+            ],
+        }).data("kendoGrid");;
+        $("#pageSizeSelector").change(function () {
+            var selectedPageSize = parseInt($(this).val(), 10);
+            // Change the page size of the DataSource
+            dataSource.pageSize(selectedPageSize);
+            // Optionally, you can refresh the grid to show the updated data
+            dataSource.read();
+        });
+
+        $("#exportBtn").click(function () {
+          // Trigger Excel export when the button is clicked
+          grid.saveAsExcel(); // 작동안됨??
+        });
+
+
+    }); //$(document).ready
+
+</script>        
+
+
+
+</body>
+</html>
