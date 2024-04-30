@@ -168,14 +168,16 @@ body.bg-gray{background:#F2F4F6;}
 .static-box .swiper-container:not(.swiper-initialized) ~ .swiper-button-next{display: none;}
 .static-box .swiper-container:not(.swiper-initialized) .static-list li{flex:1;}
 .static-list{display:flex;align-items:stretch;z-index: 3;}
-.static-list .swiper-slide {display:flex;align-items:center;padding:0 10px;height:65px;}
-.static-list .swiper-slide li{display:flex;justify-content:center;align-items:center;flex-direction:column;flex:1;}
-.static-list .swiper-slide li ~ li{position:relative;}
-.static-list .swiper-slide li ~ li:before{content:'';display:block;position:absolute;top:50%;left:0;width:1px;height:70%;background:#ddd;transform:translateY(-50%);}
-.static-list .swiper-slide b {font-weight:700;font-size:20px; color:#222;}
-.static-list .swiper-slide .txt{display:block;margin-top:5px; font-size:12px; color:#807575;}
-.static-list .swiper-slide .updown{font-size:11px;margin:2px auto; color:#aaa;}
-.static-list .swiper-slide .updown [class*=ico-]{margin-left:5px;}
+.static-list .swiper-slide{padding-top: 10px;;}
+.static-list .swiper-slide .static-tit{position:absolute;top:-2px;;left:25px;font-size:12px;font-weight:500;color:#3740af;border:1px solid #6774BD;padding:2px 8px;border-radius:10px;    background: #fff;}
+.static-list .swiper-slide ul{display:flex;align-items:center;padding:0 10px;height:65px;position:relative;top:7px;}
+.static-list .swiper-slide ul li{display:flex;justify-content:center;align-items:center;flex-direction:column;flex:1;}
+.static-list .swiper-slide ul li ~ li{position:relative;}
+.static-list .swiper-slide ul li ~ li:before{content:'';display:block;position:absolute;top:50%;left:0;width:1px;height:70%;background:#ddd;transform:translateY(-50%);}
+.static-list .swiper-slide ul b {font-weight:700;font-size:20px; color:#222;}
+.static-list .swiper-slide ul .txt{display:block;margin-top:5px; font-size:12px; color:#807575;}
+.static-list .swiper-slide ul .updown{font-size:11px;margin:2px auto; color:#aaa;}
+.static-list .swiper-slide ul .updown [class*=ico-]{margin-left:5px;}
 @media all and (max-width:800px){
 	.static-list li b{font-size:17px;}
 }
@@ -718,12 +720,12 @@ body .wrapper .data-top + *{margin-top:20px;}
 .employee-search-detail .profile-desc .info-text .info-box li .company{font-size:14px;}
 .employee-search-detail .profile-desc .info-text .compare-list .info-list{height:auto;margin-top:5px;overflow:initial;display:flex;align-items: flex-start;border-radius:10px;padding:15px 0;background:#f7faff;}
 .employee-search-detail .profile-desc .info-text .compare-list .info-list {margin-top:0;height:auto;display:flex;width:auto;align-items: stretch;}
-.employee-search-detail .profile-desc .info-text .compare-list .info-list .box{flex:1;display:flex;justify-content:center;align-items:flex-start;}
+.employee-search-detail .profile-desc .info-text .compare-list .info-list .box{flex:1;padding:0 30px;display:flex;align-items:flex-start;}
 .employee-search-detail .profile-desc .info-text .compare-list .info-list .box ~ .box{border-left:1px solid #ddd;}
-.employee-search-detail .profile-desc .info-text .compare-list .info-list ul li{display:flex;flex-direction:row;align-items:center;}
+.employee-search-detail .profile-desc .info-text .compare-list .info-list ul li{display:flex;flex-direction:row;}
 .employee-search-detail .profile-desc .info-text .compare-list .info-list ul li ~ li{margin-top:5px;}
-.employee-search-detail .profile-desc .info-text .compare-list .info-list ul li .tit{font-weight:500; color:#222;width:100px;}
-.employee-search-detail .profile-desc .info-text .compare-list .info-list ul li .txt{ color:#777;}
+.employee-search-detail .profile-desc .info-text .compare-list .info-list ul li .tit{font-weight:500; color:#222;width:100px;min-width:100px;}
+.employee-search-detail .profile-desc .info-text .compare-list .info-list ul li .txt{ color:#777;word-break: break-all;}
 .employee-search-detail .compare-list-wrap {position:relative;display:flex;gap:20px;}
 .employee-search-detail .compare-list-wrap .compare-list {flex:1;}
 .employee-search-detail .compare-list-wrap .compare-list .box {border-radius:10px;background:none;padding:0 0;max-width: 100%;}
